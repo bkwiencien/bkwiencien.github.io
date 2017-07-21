@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<!-- Linking CSS -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -10,7 +11,7 @@
 	<div class="header-container">
 		<header>Bob Kwiencien</header>
 
-		<nav>
+                <nav id="mainNavbar" class="navbar navbar-default navbar-inverse">
 			<ul>
 				<li class="bordero"><a href="index.html">About</a></li>
 				<li class="bordero"><a href="portfolio.html">Portfolio</a></li>
@@ -19,7 +20,8 @@
 		</nav>
 	</div>
 	
-	<div class="main-container">
+<!--	<div class="main-container"> -->
+	<div class="container">
 		<section id="contact-form">
 			<h2>Contact</h2>
 			<form id="contact" action="login.php" method="post">    
@@ -29,7 +31,7 @@
 				<input id="email" type="email" name="email" autocomplete="email"
 					   placeholder="example@gmail.com" required><br>
 				<label for="textfield">Message</label><br>
-				<textarea id="textfield" rows="7"></textarea><br>
+				<textarea id="textfield" rows="5"></textarea><br>
 				<button class="button" type="submit" name="submit">Submit</button>
 			</form>
     	</section>
@@ -41,12 +43,11 @@
             <li><img src="assets/images/linkedin.png"height="50",width=50"> </li>
             <a href ="https://stackoverflow.com/story/bobkwiencien">
             <li> <img src="assets/images/stackoverflow.png"height="50" width="50"></li>
-            <!--<li><strong>Email:</strong> bkwiencien@gmail.com</li> -->
-            <!-- <li><strong>Linkedin:</strong> <a href="#">sampleName</a></li> -->
-            <!--<li><strong>Portf
       		</ul>
     	</section>
 	</div>
+        <br>
+        <br>
 
 	<footer>&#64; Copyright 2017 Bob Kwiencien</footer>
 </body>

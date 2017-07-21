@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <meta charset="UTF-8">
-  <title>Bob Kwiencien's Portfolio 1</title>
+  <title>Bob Kwiencien's Bootstrap Portfolio 1</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
 </head>
 
 <body>
-  <div class="headero">
+  <!-- <div class="headero"> -->
+  <div class="grid">
   <header>Bob Kwiencien</header>
-  <!-- <p id="pone"> About me</p> -->
-  <nav>
+  <nav id="mainNavbar" class="navbar navbar-default navbar-inverse">
      <ul>
        <li class="border"><a href="index.html">About</a>
-       <li class="border"><a href="portfolio.html"> Portfolio</a></li>
-       <li ><a href="contact.html">Contact</a></li>
+       <li class="border"><a href="portfolio.html" target="_blank"> Portfolio</a></li>
+       <!-- <li ><a href="#contacto-info">Contact</a></li> -->
+       <li><a href="contact.html" target="_blank">Contact</a></li>
      </ul>
   </nav>
   </div>
 
-  <div class="main-container">
+<!--  <div class="main-container"> -->
+  <div class="container">
 
     <section id="main-bio">
        <h2>About Me</h2>
-      <!-- <img id="bio-image" src="assets/images/cute-dog-pup.jpg" height="220" width="320" alt="Bob Kwiencien"> -->
-      <img id="bio-image" src="assets/images/bob.png" height="220" width="320" alt="Bob Kwiencien">
-      <p>Oracle professional DBA and developer with 30 years experience.</p>
+      <img class="responsive-image" src="assets/images/bob.png" height="220" width="320" alt="Bob Kwiencien">
+      <p>Oracle professional DBA and developer with 30 years experience.
       Hoping to transion into web development.</p>
        </section>
           <section id="socialo">
@@ -42,7 +44,7 @@
     </section>
     </div>
  
-      <h2>Contact Info</h2>
+      <h2 id="contacto-info">Contact Info</h2>
       <ul>
         <li><strong>Email:</strong> <a href="#">bkwiencien@gmail.com</a></li>
         <li><strong>Github:</strong> <a href="#">sampleName</a></li>

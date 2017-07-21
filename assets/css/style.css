@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+img{
+display: inline-block;
+height: auto;
+max-width: 150%;
+}
 
 body {
 	color: #777777;
@@ -122,13 +127,16 @@ footer {
 	text-align: center;
 }
 
-.headero {
+.grid {
 	border-bottom: 2px solid #cccccc;
 	background-color: #ffffff;
 	height: 60px;
 }
 
-.main-container {
+.navbar {
+       background-color: #4aaaa5;
+}
+.container {
 	clear: both;
 	overflow: auto;
 	margin: 0 auto;
