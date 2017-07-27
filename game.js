@@ -12,6 +12,8 @@ var result;
    netresult = "R" + computerchoice;
    asses(netresult);
    return("R");
+function reset() {
+}
 }
 function paper(){
   updateYouChoose("P");
