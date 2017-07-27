@@ -1,60 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <meta charset="UTF-8">
-  <title>Bob Kwiencien's Bootstrap Portfolio 1</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
-</head>
-
-<body>
-  <!-- <div class="headero"> -->
-  <div class="grid">
-  <header>Bob Kwiencien</header>
-  <nav id="mainNavbar" class="navbar navbar-default navbar-inverse">
-     <ul>
-       <li class="border"><a href="index.html">About</a>
-       <li class="border"><a href="portfolio.html" target="_blank"> Portfolio</a></li>
-       <!-- <li ><a href="#contacto-info">Contact</a></li> -->
-       <li><a href="contact.html" target="_blank">Contact</a></li>
-     </ul>
-  </nav>
-  </div>
-
-<!--  <div class="main-container"> -->
-  <div class="container">
-
-    <section id="main-bio">
-       <h2>About Me</h2>
-      <img class="responsive-image" src="assets/images/bob.png" height="220" width="320" alt="Bob Kwiencien">
-      <p>Oracle professional DBA and developer with 30 years experience.
-      Hoping to transion into web development.</p>
-       </section>
-          <section id="socialo">
-          <h3>Connect with Me</h3>
-           <ul>
-            <a href="https://linkedin.com/in/bobkwiencien">
-            <li><img src="assets/images/linkedin.png"height="50",width=50"> </li>
-            <a href ="https://stackoverflow.com/story/bobkwiencien">
-            <li> <img src="assets/images/stackoverflow.png"height="50" width="50"></li>
-            <!--<li><strong>Email:</strong> bkwiencien@gmail.com</li> -->
-            <!-- <li><strong>Linkedin:</strong> <a href="#">sampleName</a></li> -->
-            <!--<li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>-->
-           </ul>
-    </section>
-    </div>
- 
-      <h2 id="contacto-info">Contact Info</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="#">bkwiencien@gmail.com</a></li>
-        <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-        <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
-      </ul>
-
-    </section>
-    </div>
-  <footer>&#64; Copyright 2017 Bob Kwiencien</footer>
-</body>
-
+	<head>
+    	<meta charset="UTF-8">
+    	<title>Rock, Paper, Scissors</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+                <img src="assets/images/image1.jpg" height="200px" width="200px">
+		<div class="panel panel-default">
+    	<div class="panel-body"><h1>Choose</h1> <br/>
+                        <button onclick="rock()" class="btn-info">Rock</button>
+                        <button onclick="paper()" class="btn-info">Paper</button>
+                        <button onclick="scissors()" class="btn-info">Scissors</button>
+		</div>	
+		</div>
+        <div class="container-fluid">
+         <div class="row">
+          <div class="col-md-12">
+           <p id="youchoose"> You chose:</p>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-12">
+           <p id="computerchose"> Computer chose:</p>
+          </div>
+         </div>
+         <div class="row">
+           <div class="col-md-12">
+             <p id="computerwins">Computer wins: 0</p>
+           </div>
+        </div>
+       <div class="row">
+          <div class="col-md-12">
+           <p id="userwins">Your wins: 0</p>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+         <p id="ties">Ties: 0</p>
+        <div>
+      </div>
+      </div>
+         <script type="text/javascript" src="game.js"></script>
+	</body>
 </html>
-
