@@ -1,4 +1,3 @@
- Ties = Ties + 1;
 var ComputerWins = 0;
 var Userwins = 0;
 var Ties    = 0;
