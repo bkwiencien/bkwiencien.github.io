@@ -54,7 +54,7 @@ element.innerHTML = "You Chose: " + x;
 }
 function updatecomputerChoose(x) {
 var element = document.getElementById("computerchose");
-element.innerHTML = "Computer choce: " + x;
+element.innerHTML = "Computer chose: " + x;
 }
 function asses(x) {
 if (x == "RR" || x == "SS" || x == "PP") {
