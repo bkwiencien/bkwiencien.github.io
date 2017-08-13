@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gem Game</title>
+  <title>Trivia Game</title>
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,41 +13,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body onload="initialize()">
+<body  background="assets/images/image1.jpg">
+  <div id="cc" class="jumbotron">
+   <div class="row">
+    <div class="col-md-12">
+    <h1><center> Early Television Trivia<img id="tv" src="assets/images/tv.jpeg" height="300px" width="300px"></center></h1>
+    <!-- <img src="assets/images/tv.jpeg" height="50px" width="50px"> -->
+    <p><center><button id="startbutton" onclick="initialize()">Start Game!</button></center></p>
+     <p id="timer"> <center></center></p>
+     <section id="questions">
+         <p>  </p>
+     </section>    
+    </div>
+   </div>
+  </div>
   <div class="jumbotron" id="mainjumbotron">
   <div class="container">
    <div class="row"
    <div class="col-md-12">
-    <section id="openingremarks">
-      <p>You will be given a random number at the start of the game.
-       There are four crystals. By clicking on a crystal you will add a specific number of points to your score.
-       You win the game by matching your total points to the random number,you lose the game if your score goes above the random number.
-The value of each crystal is hidden from you until you click upon it.
-Each time when the game starts, the game will change the value of the crystals.</p>
-    </section>
-     <section id="section1">
-       <p id="target"> target </p>
-     </section id="imagesection">
-         <a href="javascript:process1()" id="gem1">
-         <img src="assets/images/image1.jpeg" height="80px" width="80px">
-         <a href="javascript:process2()" id="gem2">
-         <img src="assets/images/image2.jpg" height="80px" width="80px">
-         <a href="javascript:process3()" id="gem3">
-         <img src="assets/images/image3.jpg" height="80px" width="80px">
-         <a href="javascript:process4()" id="gem4">
-         <img src="assets/images/image4.jpg" height="80px" width="80px">
-    <div id ="winslosses">
-        <p id="wins">wins </p> 
-        <br><p id="loses"> loses</p>
+  
+    <div id ="rightwrong">
+        <p id="correct">correct: 0 </p> 
+        <br><p id="wrong">wrong: 0</p>
+        <br><p id="unanswered"> unanswered: 0</p>
     </div> 
-    </section>
-    <section id="section2">
-     <p id="totalscore">Your total score is 0</p>
-    </section>
    </div>
      
   </div>
 </div>
-<script type="text/javascript" src="assets/javascript/gemgame.js"></script>
+ <script type="text/javascript" src="assets/javascript/app.js"></script> 
+<!-- <script type="text/javascript" src="assets/javascript/app.js"></script> -->
 </body>
 </html>
