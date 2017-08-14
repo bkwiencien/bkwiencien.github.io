@@ -5,8 +5,15 @@
 }
 #startbutton {
 	color: red;
+	font-size: 150%;
 }
 #mainjumbotron {
 	color: white;
 	background-color: #607070;
+}
+#donebutton {
+	color: red;
+}
+#doneparagraph {
+	color: red;
 }

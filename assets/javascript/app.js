@@ -1,6 +1,7 @@
 var numberCorrect = 0;
 var numberWrong = 0;
 var unanswered  = 0
+var gameAssesed = false;
 var q1 = {
 	question: "Who hosted queen for a day?",
 	possibleAnswer1: "Johnny Carson",
@@ -72,6 +73,9 @@ function initialize() {
 		}
 		if (timeLeft == 25){
 			$("#tv").attr("src","assets/images/tv1.jpeg");
+		}
+		if (timeLeft == 24){
+			$("#tv").attr("src","assets/images/tv2000.jpeg");
 		}
 		if (timeLeft == 23){
 			$("#tv").attr("src","assets/images/tv5.jpeg");
@@ -173,15 +177,18 @@ function createQuestions() {
    }
    $("#questions").append("</section>");  
 }
+   var buttonYes = document.createElement("input");
+   buttonYes.setAttribute("type","button");
+   buttonYes.setAttribute("onclick","javascript:finito()");
+   buttonYes.setAttribute("value","Done with trivia questions");
+   buttonYes.innerHTML = "Done!!!"
+   $("#donebutton").append(buttonYes);
 
 }
-$("#radio00").on("click" ,function (){
-	console.log("1 clicked");
-});
-
 function assesTheGame() {
   var whoWasChosen;
   processTheClicks();
+  console.log("in assesTheGame");
   for (j=0;j<theQuestions.length;j++) {
       var w = theQuestions[j];
       if (w.answeredCorrectly == "Y") {
@@ -194,10 +201,12 @@ function assesTheGame() {
       	 numberWrong++;
       }
     }  
-   $("#correct").html("correct: " + numberCorrect);
-   $("#wrong").html("wrong: " + numberWrong);
-   $("#unanswered").html("unanswered: " + unanswered);
-
+   if (!gameAssesed){
+      $("#correct").html("correct: " + numberCorrect);
+      $("#wrong").html("wrong: " + numberWrong);
+      $("#unanswered").html("unanswered: " + unanswered);                               
+      gameAssesed = true;
+   }
 }
 function processTheClicks() {
 	
@@ -251,6 +260,10 @@ function processTheClicks() {
 	if ($("#radio24").is(":checked")) {
 		q5.answerSupplied = "Y";
 	}
+}
+function finito() {
+	assesTheGame();
+	$("#doneparagraph").html("clicked done check below for score");
 }
 
 
