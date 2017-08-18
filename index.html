@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Trivia Game</title>
+  <title>GiphyTrial</title>
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,30 +14,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body  background="assets/images/image1.jpg">
-  <div id="cc" class="jumbotron">
-   <div class="row">
-    <div class="col-md-12">
-    <h1><center> Early Television Trivia     <img id="tv" src="assets/images/tv.jpeg" height="300px" width="300px"></center></h1>
-    <!-- <img src="assets/images/tv.jpeg" height="50px" width="50px"> -->
-    <p><center><button id="startbutton" onclick="initialize()">Start Game!</button></center></p>
-     <p id="timer"> <center></center></p>
-     <p id="doneparagraph"> </p>
-     <section id="questions">
-         <p>  </p>
-     </section>    
-     <section id="donebutton">
-         <center><p> </p></center>
-     </section>    
-    </div>
-   </div>
-    <div id ="rightwrong">
-        <p id="correct">correct: 0 </p> 
-        <br><p id="wrong">wrong: 0</p>
-        <br><p id="unanswered"> unanswered: 0</p>
-   
+
+<body onload="initialize()">
+<h1><center> Find Gifs by topic</center></h1>
+<div class="jumbotron" id="main">
+  <div clas="row">
+    <div class="col-lg-12">
+      <section id="buttonsection">
+      </section>
+      <hr id="line1">
+      <section id="textsection">
+        <form id="form1" action="javascript:searchFor()">
+          Add Topic: <input id="forma" type="text" name="what">
+          <input type="submit" value="add it to catagories">
+        </form>  
+      </section>   
+      <hr id="line2">
+      <section id="displaysection">
+        <p> .... </p>
+      </section>  
+  </div>
+<div>    
 </div>
- <script type="text/javascript" src="assets/javascript/app.js"></script> 
-<!-- <script type="text/javascript" src="assets/javascript/app.js"></script> -->
+<script type="text/javascript" src="assets/javascript/giphytrial.js"></script>
 </body>
+
 </html>
