@@ -99,6 +99,7 @@ function clickHandler(param) {
       method: 'GET'
     }).done(function(response) {
        removeImages();
+       console.log("i got here");
       for (i=0;i<response.data.length;i++) {
         var w = arrayOfGifs[i];
         var pic = document.createElement("img");
