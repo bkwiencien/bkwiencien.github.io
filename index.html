@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>GiphyTrial</title>
-
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Bob Kwiencien's Portfolio 1</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
 </head>
 
-<body onload="initialize()">
-<h1><center> Find Gifs by topic</center></h1>
-<div class="jumbotron" id="main">
-  <div clas="row">
-    <div class="col-lg-12">
-      <section id="buttonsection">
-      </section>
-      <hr id="line1">
-      <section id="textsection">
-        <form id="form1" action="javascript:searchFor()">
-          Add Topic: <input id="forma" type="text" name="what">
-          <input type="submit" value="add it to catagories">
-        </form>  
-      </section>   
-      <hr id="line2">
-      <section id="displaysection">
-        <p> .... </p>
-      </section>  
+<body>
+  <div class="headero">
+  <header>Bob Kwiencien</header>
+  <nav>
+     <ul>
+       <li class="border"><a href="index.html">About</a>
+       <li class="border"><a href="portfolio.html"> Portfolio</a></li>
+       <!-- <li ><a href="#contacto-info">Contact</a></li> -->
+       <li><a href="contact.html">Contact</a></li>
+     </ul>
+  </nav>
   </div>
-<div>    
-</div>
-<script type="text/javascript" src="assets/javascript/giphytrial.js"></script>
+
+  <div class="main-container">
+
+    <section id="main-bio">
+       <h2>About Me</h2>
+      <!-- <img id="bio-image" src="assets/images/cute-dog-pup.jpg" height="220" width="320" alt="Bob Kwiencien"> -->
+      <img id="bio-image" src="assets/images/bob.png" height="220" width="320" alt="Bob Kwiencien">
+      <p>Oracle professional DBA and developer with 30 years experience.
+      Hoping to transion into web development.</p>
+       </section>
+          <section id="socialo">
+          <h3>Connect with Me</h3>
+           <ul>
+            <a href="https://linkedin.com/in/bobkwiencien">
+            <li><img src="assets/images/linkedin.png"height="50",width=50"> </li>
+            <a href ="https://stackoverflow.com/story/bobkwiencien">
+            <li> <img src="assets/images/stackoverflow.png"height="50" width="50"></li>
+            <!--<li><strong>Email:</strong> bkwiencien@gmail.com</li> -->
+            <!-- <li><strong>Linkedin:</strong> <a href="#">sampleName</a></li> -->
+            <!--<li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>-->
+           </ul>
+    </section>
+    </div>
+ 
+      <h2 id="contacto-info">Contact Info</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="#">bkwiencien@gmail.com</a></li>
+        <li><strong>Github:</strong> <a href="#">sampleName</a></li>
+        <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+      </ul>
+
+    </section>
+    </div>
+  <footer>&#64; Copyright 2017 Bob Kwiencien</footer>
 </body>
 
 </html>
+
