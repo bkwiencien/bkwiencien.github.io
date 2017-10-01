@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
 	<!-- Linking CSS -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 		
-	<div class="header-container">
-		<header>Bob Kwiencien</header>
+          <div class ="container-fluid">
+             <div class="row">
+               <div class ="col-md-8">
+		<p class="toto">Bob Kwiencien</p>
 
-		<nav>
+                     <nav>
 			<ul>
 				<li class="bordero"><a href="index.html">About</a></li>
 				<li class="bordero"><a href="portfolio.html">Portfolio</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
-	</div>
+
+         <div class="col-md-4">
+      </div>
+      </div>
+      </div> 
 	
-	<div class="main-container">
-		<section id="contact-form">
+               <div class="row">
+               <div class="col-md-6">
+		<section id="contact-form"> 
+		<!-- <section> -->
 			<h2>Contact</h2>
 			<form id="contact" action="login.php" method="post">    
 				<label for="name">Name</label><br>
@@ -29,25 +39,24 @@
 				<input id="email" type="email" name="email" autocomplete="email"
 					   placeholder="example@gmail.com" required><br>
 				<label for="textfield">Message</label><br>
-				<textarea id="textfield" rows="7"></textarea><br>
+				<textarea id="textfield" rows="5"></textarea><br>
 				<button class="button" type="submit" name="submit">Submit</button>
 			</form>
-    	</section>
-
-    	<section id="socialo">
-      		<h3>Connect with Me</h3>
-      		<ul>
-                  <a href="https://linkedin.com/in/bobkwiencien">
-            <li><img src="assets/images/linkedin.png"height="50",width=50"> </li>
-            <a href ="https://stackoverflow.com/story/bobkwiencien">
-            <li> <img src="assets/images/stackoverflow.png"height="50" width="50"></li>
-            <!--<li><strong>Email:</strong> bkwiencien@gmail.com</li> -->
-            <!-- <li><strong>Linkedin:</strong> <a href="#">sampleName</a></li> -->
-            <!--<li><strong>Portf
-      		</ul>
-    	</section>
-	</div>
-
+          </section>
+          </div>
+          <div class="col-md-2">
+     		<h3>Connect with Me</h3>
+     		<ul>
+           <li>      <a href="https://linkedin.com/in/bobkwiencien"> </li>
+           <li><img src="assets/images/linkedin-128.png" height="40" width="40"> </li>
+           <li><a href ="https://stackoverflow.com/story/bobkwiencien"></li>
+           <li> <img src="assets/images/stackoverflow-128.png" height="40" width="40"></li>
+     		</ul>
+         	<!-- </section> -->
+         </div>
+        </div>
+        </div>
+        <br>
 	<footer>&#64; Copyright 2017 Bob Kwiencien</footer>
 </body>
 </html>
