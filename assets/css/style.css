@@ -39,6 +39,10 @@ max-width: 150%;
         color: white;
 }
 
+#headername {
+	color: #4aaaa5;
+}
+
 h2,
 h3	{
 	color: #4aaaa5;
