@@ -1,0 +1,29 @@
+#mainjumbotron {
+width 200px;
+backghround-color: blue;
+}
+#section1{
+width: 29%;
+background-color: green;
+height: 100px;
+width 50px;
+color: black;
+}
+#section2{
+background-color: green;
+width: 29%;
+height: 60px;
+width 50px;
+color: white;
+}
+#imagesection{
+width: 29%;
+}
+#cc {
+   background-color: #8B4513;
+   width: 400px;
+   height: 100px;
+   color: white;
+   font-size: 60px;
+}
+
