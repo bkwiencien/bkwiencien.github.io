@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gem Game</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body onload="initialize()">
+  <div id="cc" class="jumbotron">
+   <div class="row">
+    <div class="col-md-6">
+     <p> Crystal Collector!</p>
+    </div>
+   </div>
+  </div>
+  <div class="jumbotron" id="mainjumbotron">
+  <div class="container">
+   <div class="row"
+   <div class="col-md-12">
+    <section id="openingremarks">
+      <p>You will be given a random number at the start of the game.
+       There are four crystals. By clicking on a crystal you will add a specific number of points to your score.
+       You win the game by matching your total points to the random number,you lose the game if your score goes above the random number.
+The value of each crystal is hidden from you until you click upon it.
+Each time when the game starts, the game will change the value of the crystals.</p>
+    </section>
+     <section id="section1">
+       <p id="target"> target </p>
+     </section id="imagesection">
+         <img src="assets/images/image1.jpeg" id="gem1" height="80px" width="80px" class="selection">
+         <img src="assets/images/image2.jpg" id="gem2" height="80px" width="80px" class="selection">
+         <img src="assets/images/image3.jpg" id ="gem3" height="80px" width="80px" class="selection">
+         <img src="assets/images/image4.jpg" height="80px" id="gem4" width="80px" class="selection">
+    <div id ="winslosses">
+        <p id="wins">wins </p> 
+        <br><p id="loses"> loses</p>
+    </div> 
+    </section>
+    <section id="section2">
+     <p id="totalscore">Your total score is 0</p>
+    </section>
+   </div>
+     
+  </div>
+</div>
+<script type="text/javascript" src="assets/javascript/gemgame.js"></script>
+</body>
+</html>
