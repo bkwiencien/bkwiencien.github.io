@@ -3,6 +3,7 @@ n* {
 }
 body { 
 	#padding-top: 70px;
+	margin: 0;
 	 }
 footer {
 	background-color: orange;
@@ -24,7 +25,7 @@ footer {
 	position: fixed;
 	border: 20px;
 	height: 100px;
-	background-color: #AFB4F;
+	background-color: #dcdcce;
 	z-index: 6;
 }
 .jumbotron {
