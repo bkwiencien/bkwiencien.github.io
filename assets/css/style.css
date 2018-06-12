@@ -20,6 +20,9 @@ footer {
 	color: #4aaaa5;
 	font-size: 15px;
 }
+#label0 {
+	color: #4aaaa5;
+}
 .navbar {
 	width: 100%;
 	position: fixed;
@@ -27,6 +30,9 @@ footer {
 	height: 100px;
 	background-color: #dcdcce;
 	z-index: 6;
+}
+#fireb {
+	#float: right;
 }
 .jumbotron {
 	z-index: 1;
