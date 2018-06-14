@@ -4,13 +4,13 @@ backghround-color: blue;
 }
 #section1{
 width: 29%;
-background-color: green;
+background-color: #2253AF;
 height: 100px;
 width 50px;
 color: white;
 }
 #section2{
-background-color: green;
+background-color: #2253AF;
 width: 29%;
 height: 60px;
 width 50px;
@@ -20,7 +20,7 @@ color: white;
 width: 29%;
 }
 #cc {
-   background-color: #8B4513;
+   background-color: #2253AF;
    width: 400px;
    height: 100px;
    color: white;
