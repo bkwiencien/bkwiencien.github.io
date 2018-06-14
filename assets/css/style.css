@@ -9,7 +9,8 @@ footer {
 	background-color: orange;
 }
 #headername {
-	color: #4aaaa5;
+	#color: #4aaaa5;
+	color: white;
 	font-size: 25px;
 }
 #gemgame {
@@ -17,7 +18,12 @@ footer {
 	font-size: 15px;
 }
 #drop1 {
-	color: #4aaaa5;
+	#color: #4aaaa5;
+	color: white;
+	font-size: 15px;
+}
+#skills {
+	color: white;
 	font-size: 15px;
 }
 #label0 {
@@ -28,7 +34,8 @@ footer {
 	position: fixed;
 	border: 20px;
 	height: 100px;
-	background-color: #dcdcce;
+	#background-color: #dcdcce;
+	background-color: #2253AF;
 	z-index: 6;
 }
 #fireb {
@@ -77,12 +84,6 @@ a:hover {
 	height: auto;
 	color: none;
 	border-right: none;
-}
-section	{
-	background-color: #ffffff;
-	float: left;
-	color: #777777;
-	border: 2px solid #dddddd;
 }
 footer {
 	clear: both;
