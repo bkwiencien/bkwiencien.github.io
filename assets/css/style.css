@@ -8,6 +8,9 @@ body {
 footer {
 	background-color: orange;
 }
+#table1 {
+	border: black;
+}
 #headername {
 	#color: #4aaaa5;
 	color: white;
