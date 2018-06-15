@@ -1,50 +1,53 @@
 
 .button {
 	border: none;
-	color:  red;
+	color:  white;
 	margin: 10px;
-	background-color: green;
+	font-size: 20px;
+	background-color: #2253AF;
 }
 button {
 	margin: 5px;
-	color:  red;
-	background-color: green;
+	color:  white;
+	background-color: #2253AF;
 	padding: 10px;
 }
 .buttona {
 	border: none;
 	color:  red;
-	background-color: #808080;
+	background-color: #2253AF;
 }
 #main {
-	background-color: #808080!important;
-	color: red;
+	background-color: #2253AF;
+	color: white;
 }
 #textsection {
-	background-color: #808080;
+	background-color: #2253AF;
 	color: black;
 }
 #buttonsection {
-	background-color: #808080;
-	color: black;
+	#background-color: #808080;
+	background-color: #2253AF;
+	color: white;
+}
+#label1 {
+	color: white;
 }
 #line1 {
-	background-color: black;
+	background-color: red;
 	height: 1px;
 }
 #line2 {
 	background-color: black;
 	height: 1px;
 }
-#forma {
-	color: black;
-}
+
 #displaysection {
 	
 }
 h1 {
-	color: black;
-	background-color: #808080;
+	color: white;
+	background-color: #2253AF;
 }
 img {
 	 height: 250px;
