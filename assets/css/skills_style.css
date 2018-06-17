@@ -1,0 +1,79 @@
+n* {
+  box-sizing: border-box;
+}
+body { 
+	#padding-top: 70px;
+	margin: 0;
+	background-color: #2253AF;
+	 }
+#jumbo {
+	background-color: #2253AF;
+	color: white;
+}	 
+footer {
+	background-color: orange;
+}
+#table1 {
+	border: black;
+}
+#headername {
+	#color: #4aaaa5;
+	color: white;
+	font-size: 25px;
+}
+#skills {
+	color: white;
+	font-size: 15px;
+}
+#label0 {
+	color: #4aaaa5;
+}
+.navbar {
+	width: 100%;
+	position: fixed;
+	border: 20px;
+	height: 100px;
+	#background-color: #dcdcce;
+	background-color: #2253AF;
+	z-index: 6;
+}
+#fireb {
+	#float: right;
+}
+.jumbotron {
+	z-index: 1;
+}
+.container1 {
+	background-color: #2253AF;
+}
+h1,h2
+ {
+	color: white;
+}
+h3	{
+	color: #4aaaa5;
+	border-bottom:	3px solid #dddddd;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	margin-top: 1px;
+	padding-bottom: 3px;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}  
+
+footer {
+	clear: both;
+	margin: 0 auto;
+	vertical-align: middle;
+	padding: 18px;
+	height: 70px;
+	background-color: #303030;
+	width: 100%;
+	border-bottom: none;
+	color: #777777;
+	text-align: center;
+}
+@media screen and (max-width: 699px) and (min-width: 520px) {
+}
