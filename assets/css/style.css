@@ -21,9 +21,11 @@ footer {
 	font-size: 15px;
 }
 #drop1 {
-	#color: #4aaaa5;
 	color: white;
 	font-size: 15px;
+}
+.one1 {
+	background-color: 4aaaa5;
 }
 #skills {
 	color: white;

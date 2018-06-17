@@ -1,6 +1,9 @@
 #mainjumbotron {
 width 200px;
-backghround-color: blue;
+#background-color: blue;
+}
+#firstjumbotron {
+  width: 500px;
 }
 #section1{
 width: 29%;
@@ -21,7 +24,7 @@ width: 29%;
 }
 #cc {
    background-color: #2253AF;
-   width: 400px;
+   width: 100%;
    height: 100px;
    color: white;
    font-size: 60px;
