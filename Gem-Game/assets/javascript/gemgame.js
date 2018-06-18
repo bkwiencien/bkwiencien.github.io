@@ -2,6 +2,7 @@ var targetScore = 0;
 var currentScore = 0;
 var numbWins = 0;
 var numbLoses = 0;
+var winningSound = "07075007.wav";
 var gem1 = {
    name: "gem1",
    value: 0,
@@ -12,24 +13,25 @@ var gem2 = {
    name: "gem2",
    value: 0,
    spinState: 0,
-   soundFile: "service-bell_daniel_simion.mp3"
+   soundFile: "07074120.wav"
 }
 var gem3 = {
    name: "gem3",
    value: 0,
    spinState:  0,
-   soundFile: "service-bell_daniel_simion.mp3"
+   soundFile: "07071002.wav"
 }
 var gem4 = {
    name: "gem4",
    value: 0,
    spinState:  0,
-   soundFile: "service-bell_daniel_simion.mp3"
+   soundFile: "07042155.wav"
 }
 var gemArray = [gem1,gem2,gem3,gem4];
 function initialize() {
  targetScore = 0;
  currentScore = 0;
+ spinState    = 0;
 $("#totalscore").html("Your total score is " + currentScore);
  setUpAllGems();
  resetYourScore();
@@ -80,6 +82,7 @@ function assesTheGame() {
  if (currentScore == targetScore) {
    numbWins++;
    $("#wins").html("wins " + numbWins);
+   playSound(winningSound);
    initialize();
  }
  if (currentScore > targetScore) {
@@ -117,5 +120,10 @@ function spinIt(id) {
 }
 function playSound(ff){
   var head = "assets/sounds/";
+  var aud = new Audio();
+  aud.src = head+ff;
+//var aud = new Audio('sound.ogg');
+//Now lets play the music
+aud.play();
   //ff.play();
 }
