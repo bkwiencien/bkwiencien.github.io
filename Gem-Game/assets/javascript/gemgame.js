@@ -4,19 +4,23 @@ var numbWins = 0;
 var numbLoses = 0;
 var gem1 = {
    name: "gem1",
-   value: 0
+   value: 0,
+   spinState:  0
 }
 var gem2 = {
    name: "gem2",
-   value: 0
+   value: 0,
+   spinState: 0
 }
 var gem3 = {
    name: "gem3",
-   value: 0
+   value: 0,
+   spinState:  0
 }
 var gem4 = {
    name: "gem4",
-   value: 0
+   value: 0,
+   spinState:  0
 }
 var gemArray = [gem1,gem2,gem3,gem4];
 function initialize() {
@@ -92,6 +96,15 @@ function generateGemValue() {
      return(tempnum);
 }
 function spinIt(id) {
-  $("#"+id).css({'transform': 'rotate(-90deg)'});
-  //$("#gem1").rotateLeft();
+  var state = parseInt(id[3]);
+  var mygem = gemArray[state-1];
+  var mystate = gemArray[state-1].spinState;
+  var indo = mystate%2;
+  if (indo == 0) {
+     $("#"+id).css({'transform': 'rotate(-90deg)'});
+     gemArray[state-1].spinState = gemArray[state-1].spinState +1;
+  } else {
+    $("#"+id).css({'transform': 'rotate(+90deg)'});
+    gemArray[state-1].spinState = gemArray[state-1].spinState + 1
+  }     
 }
