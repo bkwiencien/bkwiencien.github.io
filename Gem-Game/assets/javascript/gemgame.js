@@ -49,19 +49,21 @@ function generateTargetScore() {
 }
   $(".selection").on("click",function() {
    var gemToProcess = $(this).attr("id");
-   //console.log("gemToProcess " + gemToProcess);
-   console.log(gemToProcess);
    if (gemToProcess == "gem1") {
      currentScore = currentScore + gem1.value;
+     spinIt("gem1");
    }
    if (gemToProcess == "gem2") {
      currentScore = currentScore + gem2.value;
+     spinIt("gem2");
    }
    if (gemToProcess == "gem3") {
      currentScore = currentScore + gem3.value;
+     spinIt("gem3");
    }
    if (gemToProcess == "gem4") {
      currentScore = currentScore + gem4.value;
+     spinIt("gem4");
    }
    $("#totalscore").html("Your total score is " + currentScore);
    assesTheGame()
@@ -88,4 +90,8 @@ function generateGemValue() {
       tempnum = 1;
      }
      return(tempnum);
+}
+function spinIt(id) {
+  $("#"+id).css({'transform': 'rotate(-90deg)'});
+  //$("#gem1").rotateLeft();
 }
