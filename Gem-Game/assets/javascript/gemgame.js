@@ -5,22 +5,26 @@ var numbLoses = 0;
 var gem1 = {
    name: "gem1",
    value: 0,
-   spinState:  0
+   spinState:  0,
+   soundFile:  "service-bell_daniel_simion.mp3"
 }
 var gem2 = {
    name: "gem2",
    value: 0,
-   spinState: 0
+   spinState: 0,
+   soundFile: "service-bell_daniel_simion.mp3"
 }
 var gem3 = {
    name: "gem3",
    value: 0,
-   spinState:  0
+   spinState:  0,
+   soundFile: "service-bell_daniel_simion.mp3"
 }
 var gem4 = {
    name: "gem4",
    value: 0,
-   spinState:  0
+   spinState:  0,
+   soundFile: "service-bell_daniel_simion.mp3"
 }
 var gemArray = [gem1,gem2,gem3,gem4];
 function initialize() {
@@ -100,11 +104,18 @@ function spinIt(id) {
   var mygem = gemArray[state-1];
   var mystate = gemArray[state-1].spinState;
   var indo = mystate%2;
+  var audioFile = gemArray[state-1].soundFile;
   if (indo == 0) {
      $("#"+id).css({'transform': 'rotate(-90deg)'});
      gemArray[state-1].spinState = gemArray[state-1].spinState +1;
+     playSound(audioFile);
   } else {
     $("#"+id).css({'transform': 'rotate(+90deg)'});
     gemArray[state-1].spinState = gemArray[state-1].spinState + 1
+    playSound(audioFile);
   }     
+}
+function playSound(ff){
+  var head = "assets/sounds/";
+  //ff.play();
 }
