@@ -1,1 +1,2 @@
-worker:  web
+web: gunicorn bot:bkwiencien
+
