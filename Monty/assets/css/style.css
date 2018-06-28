@@ -1,0 +1,72 @@
+
+.button {
+	border: none;
+	color:  white;
+	margin: 10px;
+	font-size: 20px;
+	background-color: #2253AF;
+}
+button {
+	margin: 5px;
+	color:  white;
+	background-color: #2253AF;
+	padding: 10px;
+}
+#container1 {
+	background-color: #2253AF;
+}
+#jumbo {
+	background-color: #2253AF;
+}
+.buttona {
+	border: none;
+	color:  red;
+	background-color: #2253AF;
+}
+#main {
+	background-color: #2253AF;
+	color: white;
+}
+#textsection {
+	background-color: #2253AF;
+	color: black;
+}
+#buttonsection {
+	#background-color: #808080;
+	background-color: #2253AF;
+	color: white;
+}
+#label1 {
+	color: white;
+}
+#line1 {
+	background-color: red;
+	height: 1px;
+}
+#line2 {
+	background-color: black;
+	height: 1px;
+}
+
+#displaysection {
+	
+}
+h1 {
+	color: white;
+	background-color: #2253AF;
+}
+h2 {
+	color: white;
+}
+#p1 {
+	color: white;
+}
+img {
+	 height: 250px;
+	 width: 250px;
+	 margin: 20px;
+}
+#rating {
+	text-align:  justify;
+	font-size:   4px;
+}

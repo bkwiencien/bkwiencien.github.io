@@ -1,21 +1,3 @@
-2018-06-15T16:30:33.649984+00:00 app[api]: Release v1 created by user bkwiencien@gmail.com
-2018-06-15T16:30:33.649984+00:00 app[api]: Initial release by user bkwiencien@gmail.com
-2018-06-15T16:30:34.103301+00:00 app[api]: Release v2 created by user bkwiencien@gmail.com
-2018-06-15T16:30:34.103301+00:00 app[api]: Enable Logplex by user bkwiencien@gmail.com
-2018-06-15T16:31:47.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
-2018-06-15T16:31:48.000000+00:00 app[api]: Build failed -- check your build logs
-2018-06-15T16:32:21.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
-2018-06-15T16:32:31.358088+00:00 app[api]: Deploy cef31e80 by user bkwiencien@gmail.com
-2018-06-15T16:32:31.358088+00:00 app[api]: Release v3 created by user bkwiencien@gmail.com
-2018-06-15T16:32:31.000000+00:00 app[api]: Build succeeded
-2018-06-15T16:32:58.624559+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=81661f5c-c536-412f-bafb-fbc7ae43317d fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:32:59.187906+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=b0345160-57ea-4c0a-8f36-ec09669c71fd fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:33:22.700344+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=b3da105e-67fd-4b99-bb39-fc99e2c0e16a fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:33:22.887233+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=ddcd647f-d25f-4da6-a057-e89cb017ec8f fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:34:26.124697+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=102807bc-0922-4978-953e-10adb597983a fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:34:26.439855+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=07daae2e-1a1e-4de7-be49-cb6d86b210a9 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:36:01.481601+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=a81b9e8f-d349-4e88-ae22-dd9705eecf9a fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
-2018-06-15T16:36:01.619634+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=fc78c976-3f76-4700-9d74-0031001049e6 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
 2018-06-15T16:55:56.401065+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=f33737bd-a3c4-4f62-8f02-679795f499f5 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
 2018-06-15T16:55:56.577258+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=e927cf09-22d2-4efe-8205-77e2318adf4a fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
 2018-06-15T18:46:56.473176+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=850c8bc1-91f5-4c74-b5a8-c82091b24786 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
@@ -36,3 +18,83 @@
 2018-06-17T11:33:23.627870+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=b8520325-d305-4476-b97c-8d59bd922c37 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
 2018-06-17T11:36:57.586339+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=2972e3b1-b7b5-4f91-b67a-2aa391f4dcb9 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
 2018-06-17T11:36:57.913057+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=0b90e642-05b7-445b-9806-9e21b4835a4b fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T13:51:44.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T13:51:53.972968+00:00 app[api]: Deploy 87f05c19 by user bkwiencien@gmail.com
+2018-06-17T13:51:53.972968+00:00 app[api]: Release v4 created by user bkwiencien@gmail.com
+2018-06-17T13:51:54.000000+00:00 app[api]: Build succeeded
+2018-06-17T13:52:04.470450+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=513f00ba-2ef4-4d5f-bea0-afaaed6b7523 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T13:52:04.804299+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=4ccf3c83-1f1c-40e2-8776-1a6f45333889 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:13:11.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T14:13:12.000000+00:00 app[api]: Build failed -- check your build logs
+2018-06-17T14:14:16.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T14:14:17.000000+00:00 app[api]: Build failed -- check your build logs
+2018-06-17T14:15:05.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T14:15:14.846471+00:00 app[api]: Deploy 87f05c19 by user bkwiencien@gmail.com
+2018-06-17T14:15:14.846471+00:00 app[api]: Release v5 created by user bkwiencien@gmail.com
+2018-06-17T14:15:15.000000+00:00 app[api]: Build succeeded
+2018-06-17T14:15:22.891870+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=f5972627-f49a-4ec9-b40e-5f1f851832b8 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:15:23.207764+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=86844c3b-616e-4d46-b06a-01038e97d22b fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:15:28.619651+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=3071f2ab-ee78-4760-a688-d3425499f44c fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:15:28.790268+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=a60a84e3-736c-491c-8939-c5ae00d1fd5f fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:18:49.906581+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=31728ad8-aafb-4e40-8f97-a8a188c39cc4 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:18:50.211263+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=c504f671-fd11-4a70-844e-c448c80fb773 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:27:01.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T14:27:11.619527+00:00 app[api]: Deploy 0248d980 by user bkwiencien@gmail.com
+2018-06-17T14:27:11.619527+00:00 app[api]: Release v6 created by user bkwiencien@gmail.com
+2018-06-17T14:27:11.000000+00:00 app[api]: Build succeeded
+2018-06-17T14:27:18.623949+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=e36ed600-157e-4a02-85f8-99811495acf9 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T14:27:18.925582+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=840555a2-7888-4f92-8218-c408837cb4ad fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-17T23:10:02.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T23:10:12.045975+00:00 app[api]: Deploy 69f64d65 by user bkwiencien@gmail.com
+2018-06-17T23:10:12.045975+00:00 app[api]: Release v7 created by user bkwiencien@gmail.com
+2018-06-17T23:10:12.000000+00:00 app[api]: Build succeeded
+2018-06-17T23:11:01.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-17T23:11:11.553457+00:00 app[api]: Deploy ccf6ac26 by user bkwiencien@gmail.com
+2018-06-17T23:11:11.553457+00:00 app[api]: Release v8 created by user bkwiencien@gmail.com
+2018-06-17T23:11:11.000000+00:00 app[api]: Build succeeded
+2018-06-18T07:47:49.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-18T07:47:59.203510+00:00 app[api]: Deploy ccf6ac26 by user bkwiencien@gmail.com
+2018-06-18T07:47:59.203510+00:00 app[api]: Release v9 created by user bkwiencien@gmail.com
+2018-06-18T07:47:59.000000+00:00 app[api]: Build succeeded
+2018-06-18T07:48:14.007838+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=9e63b670-123e-4a30-9af2-10106d306af1 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T07:48:14.329375+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=d360c3b0-adb8-4414-89f0-738ae42c85a2 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T07:52:35.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-18T07:52:45.000000+00:00 app[api]: Build succeeded
+2018-06-18T07:52:45.399531+00:00 app[api]: Deploy 6bd62ee8 by user bkwiencien@gmail.com
+2018-06-18T07:52:45.399531+00:00 app[api]: Release v10 created by user bkwiencien@gmail.com
+2018-06-18T07:52:50.665538+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=6589450e-dc76-49c9-a551-724c56be1ca7 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T07:52:50.991545+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=22b0c011-0dba-48fe-84cd-72ec694c311b fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T07:57:04.073656+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=ddc416b9-e18c-45ef-be77-a53d432f5fdb fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T07:57:04.352955+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=7ae3a819-f3de-4e3f-8410-b165e5613f20 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T08:07:18.084121+00:00 app[api]: Attach LIBRATO (@ref:librato-reticulated-73461) by user bkwiencien@gmail.com
+2018-06-18T08:07:18.084121+00:00 app[api]: Release v11 created by user bkwiencien@gmail.com
+2018-06-18T21:00:22.712174+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=838e8be0-e72a-469b-ad65-660866389ab5 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T21:00:22.891093+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=4cab5279-ee08-44df-8099-2c6579c7229d fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T22:44:49.105569+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=01c1de0f-4f0d-448e-992a-90fcf7e8af6e fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T22:44:49.302809+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=d1199f3b-2312-437d-bd15-4c946c82ff9f fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T23:02:33.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-18T23:02:44.118776+00:00 app[api]: Deploy 1e735569 by user bkwiencien@gmail.com
+2018-06-18T23:02:44.118776+00:00 app[api]: Release v12 created by user bkwiencien@gmail.com
+2018-06-18T23:02:44.000000+00:00 app[api]: Build succeeded
+2018-06-18T23:04:41.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-18T23:04:51.851005+00:00 app[api]: Release v13 created by user bkwiencien@gmail.com
+2018-06-18T23:04:51.851005+00:00 app[api]: Deploy 50a30f02 by user bkwiencien@gmail.com
+2018-06-18T23:04:52.000000+00:00 app[api]: Build succeeded
+2018-06-18T23:04:57.310759+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=b50f3a41-e800-4a13-b84d-6f7e60ce177c fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-18T23:04:57.633819+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=46dc5763-0d71-48cd-b9b5-77be469f0807 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-20T11:30:31.090921+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=12b3bf4f-e174-4fbf-9f6a-863443acc81c fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-20T11:30:31.519927+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=7b7c86fb-9eb8-4440-a622-b99ebaa987c6 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-20T11:33:54.000000+00:00 app[api]: Build started by user bkwiencien@gmail.com
+2018-06-20T11:34:04.948979+00:00 app[api]: Release v14 created by user bkwiencien@gmail.com
+2018-06-20T11:34:05.000000+00:00 app[api]: Build succeeded
+2018-06-20T11:34:04.948979+00:00 app[api]: Deploy 50a30f02 by user bkwiencien@gmail.com
+2018-06-20T11:34:44.131026+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=0a52671e-8437-493b-a2a8-97a99fde1a90 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-20T11:34:44.462845+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=6dcf86d7-0e9f-4d56-8e0b-17975e1df935 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-21T00:24:06.706642+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=c4908374-a333-46f3-9a67-acbf751f2278 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-21T00:24:08.968284+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=b4027041-1a04-4512-8920-f270bb687474 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-21T01:47:15.839253+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/robots.txt" host=bkwiencien.herokuapp.com request_id=4519afc9-3c1d-4b20-b387-dc602fdc360b fwd="94.130.167.83" dyno= connect= service= status=503 bytes= protocol=http
+2018-06-21T01:47:16.037573+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=bkwiencien.herokuapp.com request_id=848b311b-971b-4467-862f-4b525d93c2c9 fwd="94.130.167.83" dyno= connect= service= status=503 bytes= protocol=http
+2018-06-22T11:22:00.236103+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/index.html" host=bkwiencien.herokuapp.com request_id=da0a6280-6a38-451e-beee-9e75bed44bfe fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-22T11:22:00.879334+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=dbc50268-c40e-4fa3-9a9d-10fffffd9eb8 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-22T21:49:07.108207+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/index.html" host=bkwiencien.herokuapp.com request_id=844bef12-f871-4f51-bac4-2140d6b05af5 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
+2018-06-22T21:49:08.126468+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=bkwiencien.herokuapp.com request_id=b897fb87-b994-4130-828a-f9151e462ff7 fwd="174.100.36.174" dyno= connect= service= status=503 bytes= protocol=https
