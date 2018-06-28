@@ -1,10 +1,10 @@
 
-.button {
-	border: none;
-	color:  white;
+#button1 {
+	border: 4px;
+	color:  black;
 	margin: 10px;
 	font-size: 20px;
-	background-color: #2253AF;
+	background-color: white;
 }
 button {
 	margin: 5px;
@@ -12,11 +12,18 @@ button {
 	background-color: #2253AF;
 	padding: 10px;
 }
+.pclass {
+	color: white;
+}
 #container1 {
 	background-color: #2253AF;
 }
 #jumbo {
 	background-color: #2253AF;
+}
+#dialog {
+	color: white;
+	font-size: 20px;
 }
 .buttona {
 	border: none;
@@ -66,6 +73,9 @@ th {
 }
 #table1 {
 	align: center;
+}
+#label1 {
+	color: white;
 }
 img {
 	 height: 250px;
