@@ -61,6 +61,12 @@ h2 {
 #p1 {
 	color: white;
 }
+th {
+	color: white;
+}
+#table1 {
+	align: center;
+}
 img {
 	 height: 250px;
 	 width: 250px;
