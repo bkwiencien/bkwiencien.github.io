@@ -55,14 +55,29 @@ var door3 = {
 	}
 }
 var doors = [door1,door2,door3]
+var doorWithPrize = -1
+var doorPicked = -1
 function btnPress() {
-	//alert('pressed the button')
-	$('#dialog').text("hello")
+	var vall=null
+	var ind = -1
+	var radioValue = $("input[name='checko']:checked").val();
+	ind = parseInt(radioValue)
+	ind--;
+	if (isNaN(ind)){
+		$("#dialog").text("You must chose a door")
+    } else {		
+	   var w = doors[ind]
+	   console.log("ind = " + ind)
+	   w.choseMe()
+	   $("#dialog").text("Door " + (ind+1) + " is picked" )
+	   doorPicked = ind+1
+	}   
 }
 function setThePrize() {
 	var n = parseInt((Math.random()*100)%3)
 	var w = doors[n]
 	w.setPrize()
+	doorWithPrize = n+1
 }
 function initialize() {
 	wins = 0
@@ -71,4 +86,7 @@ function initialize() {
 		doors[j].reset()
 	}
 	setThePrize()
+	$('#makechoice').hide()
+	doorWithPrize = -1
+	doorPicked = -1
 }
