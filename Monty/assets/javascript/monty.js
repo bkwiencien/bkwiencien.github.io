@@ -108,7 +108,7 @@ function yesNo() {
                     $('#'+newPick.imageid).attr('src','assets/images/car.jpg')
 				} else {
 					loses++;
-					$("ploses").text("loses " + loses)
+					$("#ploses").text("loses " + loses)
 					$('#'+newPick.imageid).attr('src','assets/images/goat.jpg')
 
 				}
