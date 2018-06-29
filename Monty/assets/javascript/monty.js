@@ -182,6 +182,7 @@ function reset() {
 		doors[j].reset()
 	}
 	setThePrize()
+	availableToShow = []
 	$("#button2").prop('disabled',false)
 	$("#button1").prop('disabled',false)
 	$("#dialog").text("")
