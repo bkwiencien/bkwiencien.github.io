@@ -3,6 +3,7 @@ var loses
 var door1 = {
 	name: "door1",
 	chosen: false,
+	available: true,
 	contents: "goat",
 	choseMe: function() {
 		this.chosen = true
@@ -10,6 +11,7 @@ var door1 = {
 	reset: function() {
 		this.chosen = false
 		this.contents = "goat"
+		this.available = true
 	},
 	setPrize: function(){
 		this.contents="PRIZE"
@@ -21,6 +23,7 @@ var door1 = {
 var door2 = {
 	name: "door2",
 	chosen: false,
+	available: true,
 	contents: "goat",
     choseMe:  function() {
 		this.chosen = true
@@ -28,6 +31,7 @@ var door2 = {
 	reset: function() {
 		this.chosen = false
 		this.contents = "goat"
+		this.available = true
 	},
 	setPrize: function() {
 		this.contents="PRIZE"
@@ -39,6 +43,7 @@ var door2 = {
 var door3 = {
 	name: "door3",
 	chosen: false,
+	available: true,
 	contents: "goat",
     choseMe: function() {
 		this.chosen = true
@@ -46,6 +51,7 @@ var door3 = {
 	reset: function() {
 		this.chosen = false
 		this.contents = "goat"
+		this.available = true
 	},
 	setPrize: function() {
 		this.contents="PRIZE"
@@ -55,6 +61,7 @@ var door3 = {
 	}
 }
 var doors = [door1,door2,door3]
+var availableToShow = []
 var doorWithPrize = -1
 var doorPicked = -1
 function btnPress() {
@@ -71,12 +78,26 @@ function btnPress() {
 	   w.choseMe()
 	   $("#dialog").text("Door " + (ind+1) + " is picked" )
 	   doorPicked = ind+1
+	   findAChoice()
 	}   
+}
+function findAChoice() {
+	for (j=0;j<3;j++) {
+		w=doors[j]
+		if ((w.contents=='goat') && (w.chosen==false)) {
+			availableToShow.push(w)
+			console.log("available is " + w.name)
+
+	}
+	
+
+}
 }
 function setThePrize() {
 	var n = parseInt((Math.random()*100)%3)
 	var w = doors[n]
 	w.setPrize()
+	console.log("doorWithPrize is " + w.name)
 	doorWithPrize = n+1
 }
 function initialize() {
