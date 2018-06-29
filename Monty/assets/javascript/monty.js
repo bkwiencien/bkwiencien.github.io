@@ -5,13 +5,17 @@ var door1 = {
 	chosen: false,
 	available: true,
 	contents: "goat",
+	imageid:  "image1",
+	opened:   false,
 	choseMe: function() {
 		this.chosen = true
 	},
 	reset: function() {
 		this.chosen = false
 		this.contents = "goat"
-		this.available = true
+		this.available = true,
+		this.opened = false,
+		$('#door1').attr('src','assets/images/door1.jpg')
 	},
 	setPrize: function(){
 		this.contents="PRIZE"
@@ -25,6 +29,8 @@ var door2 = {
 	chosen: false,
 	available: true,
 	contents: "goat",
+	imageid:  "image2",
+	opened:   false,
     choseMe:  function() {
 		this.chosen = true
 	},
@@ -32,6 +38,8 @@ var door2 = {
 		this.chosen = false
 		this.contents = "goat"
 		this.available = true
+		this.opened = false
+		$('#door2').attr('src','assets/images/door2.jpg')
 	},
 	setPrize: function() {
 		this.contents="PRIZE"
@@ -45,6 +53,8 @@ var door3 = {
 	chosen: false,
 	available: true,
 	contents: "goat",
+	imageid: "image3",
+	opened:  false,
     choseMe: function() {
 		this.chosen = true
 	},
@@ -52,6 +62,8 @@ var door3 = {
 		this.chosen = false
 		this.contents = "goat"
 		this.available = true
+		this.opened = false
+		$('#door3').attr('src','assets/images/door3.jpg')
 	},
 	setPrize: function() {
 		this.contents="PRIZE"
@@ -64,6 +76,10 @@ var doors = [door1,door2,door3]
 var availableToShow = []
 var doorWithPrize = -1
 var doorPicked = -1
+function yesNo() {
+	var a =1
+
+}
 function btnPress() {
 	var vall=null
 	var ind = -1
@@ -76,10 +92,20 @@ function btnPress() {
 	   var w = doors[ind]
 	   console.log("ind = " + ind)
 	   w.choseMe()
+	   w.opened = true
 	   $("#dialog").text("Door " + (ind+1) + " is picked" )
 	   doorPicked = ind+1
 	   findAChoice()
+	   console.log('do the show')
+	   $("#question").text(availableToShow[0].name + " has a goat do you want to switch")
+	   changeToGoatImage(availableToShow[0])
+	   $("#button1").prop('disabled',true)
+	   $('#makechoice').show()
 	}   
+}
+function changeToGoatImage(w) {
+	console.log("in changeToGoatImage " + w.imageid)
+	$('#'+w.imageid).attr('src','assets/images/goat.jpg')
 }
 function findAChoice() {
 	for (j=0;j<3;j++) {
@@ -89,8 +115,6 @@ function findAChoice() {
 			console.log("available is " + w.name)
 
 	}
-	
-
 }
 }
 function setThePrize() {
@@ -103,11 +127,13 @@ function setThePrize() {
 function initialize() {
 	wins = 0
 	loses = 0
+	reset()
+}
+function reset() {
 	for (j=0;j<3;j++){
 		doors[j].reset()
 	}
 	setThePrize()
 	$('#makechoice').hide()
-	doorWithPrize = -1
 	doorPicked = -1
 }

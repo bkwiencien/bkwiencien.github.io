@@ -30,11 +30,21 @@
       <input type="button" class="btn btn-primary" id="button1" value="submit" onclick="btnPress()"> 
     </form>
       <div id=dialog>
-      <p id="dialog"> diaglog div</p>
-       <div id="makechoice">
-         <p>!!!!!!!!!</p>
-       </div>  
+      <p id="dialog"> diaglog div</p> 
     </div> 
+       <div id="makechoice">
+          <p id="question">Do you want to switch</p>
+          <form id="form2">
+            <table id="yesnotable">
+             <tr> 
+            <td><input type="radio" class="radio" name="yesno" id="radioyes" value="Y">Yes</td>
+            <td><input type="radio" class="radio" name="yesno" id="radiono" value="N">No</td>
+            </tr>
+              </table>
+            <input type="button" class="btn btn-primary" id="button2" value="submit(yes or no)" onclick="yesNo()">
+          </form>
+
+       </div>  
     </div>
   </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
