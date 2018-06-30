@@ -118,7 +118,7 @@ function yesNo() {
 	}
 	setTimeout(function(){
     reset();
-     }, 3000);
+     }, 2000);
 	 
 
 }
