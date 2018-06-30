@@ -16,6 +16,11 @@ button {
 	color: white;
     text-decoration-line: underline;
 }
+#prob {
+	border: 2px white;
+	text-align: left;
+	padding: 10px;
+}
 .pclass {
 	color: white;
 }

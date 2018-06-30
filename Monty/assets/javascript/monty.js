@@ -1,5 +1,6 @@
 var wins
 var loses
+var probability
 var door1 = {
 	name: "door1",
 	chosen: false,
@@ -85,14 +86,20 @@ function yesNo() {
 	if (aa == "N") {
         if (doorPicked.contents=="goat") {
         	loses++;
+        	probability=parseFloat(wins/(wins+loses))
+        	console.log("probability = " + probability)
         	$('#'+doorPicked.imageid).attr('src','assets/images/goat.jpg')
         	$("#ploses").text("loses " + loses)
+        	$("#probability").text("proability of success " + probability)
 
         } else {
         	if (doorPicked.contents=="PRIZE") {
         		wins++
+        		probability=parseFloat(wins/(wins+loses))
+        		console.log("probability = " + probability)
         		$('#'+doorPicked.imageid).attr('src','assets/images/car.jpg')
         		$("#pwins").text("wins " + wins)
+        		$("#probability").text("proability of success " + probability)
 
         	}
         }
@@ -104,11 +111,15 @@ function yesNo() {
 				newPick=doors[i]
 				if (newPick.contents=="PRIZE"){
 					wins++
+					probability=parseFloat(wins/(wins+loses))
 					$("#pwins").text("wins " + wins)
+					$("#probability").text("proability of success " + probability)
                     $('#'+newPick.imageid).attr('src','assets/images/car.jpg')
 				} else {
 					loses++;
 					$("#ploses").text("loses " + loses)
+					probability=parseFloat(wins/(wins+loses))
+					$("#probability").text("proability of success " + probability)
 					$('#'+newPick.imageid).attr('src','assets/images/goat.jpg')
 
 				}
