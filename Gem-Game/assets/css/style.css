@@ -22,6 +22,10 @@ color: white;
 #imagesection{
 width: 29%;
 }
+#openingremarks {
+	color: white;
+	background-color: #2253AF
+}
 #cc {
    background-color: #2253AF;
    width: 100%;
