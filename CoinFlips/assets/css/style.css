@@ -15,6 +15,24 @@ button {
 #p1 {
 	color: white;
 }
+#p2 {
+    color: white;
+}
+#chsequence {
+	width: 20%;
+}
+#numbtrials {
+	width: 60%;
+}
+#submito {
+	color: black;
+}
+#buffer {
+	color: #2253AF;
+}
+.form-control {
+	width: 10%;
+}
 #prob {
 	border: 2px white;
 	text-align: left;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Bob Kwiencien </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="initialize()">
+	<div class="container" id="container1">
+     <div class="jumbotron" id="jumbo">	
+      <h2><center><em>Monty Hall Pseudo Paradox</em> </center></h2>
+      <p id="p1" class="intro">There is a car behind one of the doors. The others contain goats.Choose a door; Monty reveals a goat behind one of the doors you did not choose. 
+      Monty offers you a chance to change your pick.Switching is your best option.
+      Play about 15 times with one strategy and then the other and it will be obvious</p>
+      <p id ="p2">see: <a id="a1" href="https://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall</a></p>
+      <hr>
+      <table id="prob">
+        <tr>
+          <td><p id="pwins" class="pclass">wins 0</p></td>
+          <td><p class="dash">--------</p></td>
+          <td><p id="ploses" class="pclass">loses 0</p></td>
+          <td><p class="dash">--------</p></td>
+          <td><p id="probability" class="pclass">proability of success _</p></td>
+        </tr>  
+    </table>
+      <center><table id="table1">
+       <th>Door 1</th><th>Door 2</th><th>Door 3</th>
+       <tr>
+        <form id="form1">
+        <td><img id ="image1" src="assets/images/door1.jpg">
+          <input type="radio" class="radio" id="box1" name="checko" value="1"></td>
+        <td><img id="image2" src="assets/images/door2.jpg">
+          <input type="radio" class="radio" id="box2" name="checko" value="2"></td>
+        <td><img id="image3" src="assets/images/door3.jpg">
+          <input type="radio" class="radio" id="box3" name="checko" value="3"></td>
+       </tr>   
+      </table></center>
+      <label id="label1" for="button1">submit choice</label>
+      <input type="button" class="btn btn-primary" id="button1" value="submit" onclick="btnPress()"> 
+    </form>
+      <div id=dialog>
+      <p id="dialog"> </p> 
+    </div> 
+       <div id="makechoice">
+          <p id="question">Do you want to switch</p>
+          <form id="form2">
+            <table id="yesnotable">
+             <tr> 
+            <td><input type="radio" class="radio" name="yesno" id="radioyes" value="Y">Yes</td>
+            <td><input type="radio" class="radio" name="yesno" id="radiono" value="N">No</td>
+            </tr>
+              </table>
+            <input type="button" class="btn btn-primary" id="button2" value="submit(yes or no)" onclick="yesNo()">
+          </form>
+
+       </div>  
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/monty.js"></script>
+</body>
+</html>
+
+
+
