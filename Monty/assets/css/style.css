@@ -12,6 +12,9 @@ button {
 	background-color: #2253AF;
 	padding: 10px;
 }
+.dash {
+	color: #2253AF;
+}
 #a1 {
 	color: white;
     text-decoration-line: underline;
