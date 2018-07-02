@@ -24,6 +24,16 @@ function displayAvg(inarray) {
 	var ans = inarray
 	$('#resultline').text('average number of coin flips is ' + ans[0].toFixed(3))
 	$('#maxline').text('maximum number of coin flips is  ' + ans[1].toFixed(3))
+  //plotEm(ans)
+}
+function plotEm(array) {
+  var trace = {
+    x: array,
+    type: 'histogram',
+  };
+var data = [trace];
+Plotly.newPlot('results', data);
+
 }
 function hh(numbTrials) {
    var reso = []
