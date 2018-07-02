@@ -20,8 +20,10 @@ function getParms() {
 		ht(parseInt(numb))
 	}
 }
-function displayAvg(meano) {
-	console.log(meano)
+function displayAvg(inarray) {
+	var ans = inarray
+	$('#resultline').text('average number of coin flips is ' + ans[0].toFixed(3))
+	$('#maxline').text('maximum number of coin flips is  ' + ans[1].toFixed(3))
 }
 function hh(numbTrials) {
    var reso = []
@@ -56,7 +58,8 @@ function hh(numbTrials) {
         }
    	  }
    }
-   displayAvg(findAvg(reso));
+   var x = findAvg(reso)
+   displayAvg(x);
 }
 function ht(numbTrials) {
    var reso = []
@@ -64,11 +67,43 @@ function ht(numbTrials) {
    var res = null
    var count = 0
    var nn = numbTrials -1 
-}
+   for (j=0;j<nn;j++){
+   	  var done = false
+   	  state = parseInt(1)
+   	  count = 0
+   	  while (state != 3){
+   	  	res = flip().trim()
+   	  	count++
+   	  	done = false
+   	  	if ((res == "H") && (state == 1) && (done == false)){
+          state = 2
+          done = "T"
+        }
+        if((res == "T") && (state == 2) && (done == false)){
+           state = 3
+           reso[j] = count
+           done = "T"
+        }
+        if((res == "H") && (state == 2) && (done == false)){
+           state = 2
+           done = "T"
+         }
+         if((res == "T") && (state == 1) && (done == false)){
+           state = 1
+           done = "T"
+   	     }	
+     }
+     var x = findAvg(reso)
+     displayAvg(x);
+    }
+   }  
 function findAvg(array){
 	var sumo = 0
+	var res = []
 	for (i=0;i<array.length;i++){
        sumo += array[i]
 	}
-	return(sumo/array.length)
+	res[0] = sumo/array.length
+	res[1] = Math.max(...array)
+	return(res)
 }
