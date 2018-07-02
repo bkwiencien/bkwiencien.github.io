@@ -20,6 +20,9 @@ function getParms() {
 		ht(parseInt(numb))
 	}
 }
+function displayAvg(meano) {
+	console.log(meano)
+}
 function hh(numbTrials) {
    var reso = []
    var state = 0
@@ -53,7 +56,7 @@ function hh(numbTrials) {
         }
    	  }
    }
-   console.log("mean  = " + findAvg(reso))
+   displayAvg(findAvg(reso));
 }
 function ht(numbTrials) {
    var reso = []

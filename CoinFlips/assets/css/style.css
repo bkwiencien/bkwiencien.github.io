@@ -30,6 +30,9 @@ button {
 #buffer {
 	color: #2253AF;
 }
+#resultline {
+	color: white;
+}
 .form-control {
 	width: 10%;
 }
