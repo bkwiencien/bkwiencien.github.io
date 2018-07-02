@@ -21,15 +21,51 @@ function getParms() {
 	}
 }
 function hh(numbTrials) {
-   var aresults = []
+   var reso = []
    var state = 0
-   while (j=0;numbTrials-1;j++){
+   var res = null
+   var count = 0
+   var nn = numbTrials -1 
+   for (j=0;j<nn;j++){
+   	  var done = false
+   	  state = parseInt(1)
+   	  count = 0
    	  while (state != 3){
-   	  	state = 3
+   	  	res = flip().trim()
+   	  	count++
+   	  	done = false
+   	  	if ((res == "H") && (state == 1) && (done == false)){
+          state = 2
+          done = true
+        }
+        if((res == "T") && (state == 2) && (done == false)){
+          state = 1
+          done  = true
+        }
+        if((res == "H") && (state == 2) && (done == false)){
+          state = 3
+          reso[j] = count
+          done = true
+        }
+        if((res == "T") && (state == 1) && (done == false)){
+          state = 1
+          done = true
+        }
    	  }
    }
+   console.log("mean  = " + findAvg(reso))
 }
 function ht(numbTrials) {
-   var aresults = []
-   var state = 0;
+   var reso = []
+   var state = 0
+   var res = null
+   var count = 0
+   var nn = numbTrials -1 
+}
+function findAvg(array){
+	var sumo = 0
+	for (i=0;i<array.length;i++){
+       sumo += array[i]
+	}
+	return(sumo/array.length)
 }
