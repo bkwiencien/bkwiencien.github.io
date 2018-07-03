@@ -1,3 +1,4 @@
+
 function initialize() {
 	var a = 11
 	console.log('in init')
@@ -20,21 +21,35 @@ function getParms() {
 		ht(parseInt(numb))
 	}
 }
-function displayAvg(inarray) {
+function displayAvg(inarray,barray) {
 	var ans = inarray
+  var tarray = barray
+  var listOfList = []
 	$('#resultline').text('average number of coin flips is ' + ans[0].toFixed(3))
 	$('#maxline').text('maximum number of coin flips is  ' + ans[1].toFixed(3))
-  //plotEm(ans)
+  listOfList = magic(barray)
 }
 function plotEm(array) {
-  var trace = {
-    x: array,
-    type: 'histogram',
-  };
-var data = [trace];
-Plotly.newPlot('results', data);
-
-}
+  var useThis = array
+  console.log('in plotEm ' + array)
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+      var data = google.visualization.arrayToDataTable(useThis)
+      console.log("data = " + data)
+      var options = {
+          title: 'breakdown of flips',
+        };
+       var chart = new google.visualization.Histogram(document.getElementById('results'));
+        chart.draw(data, options);
+      }
+     } 
+function magic(aa){
+  var res = []
+  var test = ['x1',2]
+  res.push(test)
+  return(res)
+}          
 function hh(numbTrials) {
    var reso = []
    var state = 0
@@ -69,7 +84,8 @@ function hh(numbTrials) {
    	  }
    }
    var x = findAvg(reso)
-   displayAvg(x);
+   displayAvg(x,reso)
+   
 }
 function ht(numbTrials) {
    var reso = []
@@ -103,9 +119,9 @@ function ht(numbTrials) {
            done = "T"
    	     }	
      }
-     var x = findAvg(reso)
-     displayAvg(x);
     }
+     var x = findAvg(reso)
+     displayAvg(x,reso);
    }  
 function findAvg(array){
 	var sumo = 0
