@@ -44,6 +44,7 @@ function plotEm(array) {
         chart.draw(data, options);
       }
      } 
+// creat the necessary object for Googler charts     
 function magic(aa){
   var res = []
   var test = ['x1',2]
