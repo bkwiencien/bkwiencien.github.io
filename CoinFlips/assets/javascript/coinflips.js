@@ -1,6 +1,41 @@
-
+var buckets = {
+  varray:  [],
+  temp:    [],
+  init:    function() {
+    this.varray = []
+    this.temp   = []
+    this.temp = [0,'bucket1']
+    this.varray.push(this.temp),
+    this.temp = [0,'bucket2']
+    this.varray.push(this.temp)
+    this.temp = [0,'bucket3']
+    this.varray.push(this.temp)
+    this.temp = [0,'bucket4']
+    this.varray.push(this.temp)
+    this.temp = [0,'bucket5']
+    this.varray.push(this.temp)
+  },
+  allocate: function(v){
+    if ((v>1) && (v<=6)) {
+      this.varray[0][0]++
+    }
+    if ((v>6) && (v<=10)) {
+      this.varray[1][0]++
+    }
+    if ((v>10) && (v<=15)) {
+      this.varray[2][0]++
+    }
+    if ((v>15) && (v<=20)) {
+      this.varray[3][0]++
+    }
+    if (v>=21) {
+      this.varray[4][0]++
+    }
+  }
+}
 function initialize() {
 	var a = 11
+  buckets.init()
 	console.log('in init')
 }
 function flip(){
@@ -27,35 +62,33 @@ function displayAvg(inarray,barray) {
   var listOfList = []
 	$('#resultline').text('average number of coin flips is ' + ans[0].toFixed(3))
 	$('#maxline').text('maximum number of coin flips is  ' + ans[1].toFixed(3))
-  listOfList = magic(barray)
+  plotEm()
 }
-function plotEm(array) {
-  var useThis = array
-  console.log('in plotEm ' + array)
+function plotEm() {
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-      var data = google.visualization.arrayToDataTable(useThis)
+      var data = google.visualization.arrayToDataTable(buckets.varray,true)
       console.log("data = " + data)
       var options = {
           title: 'breakdown of flips',
+          title: 'Flip distribution',
+          legend: { position: 'none' },
+          isStacked: false,
+          histogram: { lastBucketPercentile: 5 },
+          //vAxis: { scaleType: 'mirrorLog' },
+          histogram: { bucketSize: 10 }
         };
        var chart = new google.visualization.Histogram(document.getElementById('results'));
         chart.draw(data, options);
       }
      } 
-// creat the necessary object for Googler charts     
-function magic(aa){
-  var res = []
-  var test = ['x1',2]
-  res.push(test)
-  return(res)
-}          
 function hh(numbTrials) {
    var reso = []
    var state = 0
    var res = null
    var count = 0
+   buckets.init()
    var nn = numbTrials -1 
    for (j=0;j<nn;j++){
    	  var done = false
@@ -76,6 +109,7 @@ function hh(numbTrials) {
         if((res == "H") && (state == 2) && (done == false)){
           state = 3
           reso[j] = count
+          buckets.allocate(count)
           done = true
         }
         if((res == "T") && (state == 1) && (done == false)){
@@ -93,6 +127,7 @@ function ht(numbTrials) {
    var state = 0
    var res = null
    var count = 0
+   buckets.init()
    var nn = numbTrials -1 
    for (j=0;j<nn;j++){
    	  var done = false
@@ -109,6 +144,7 @@ function ht(numbTrials) {
         if((res == "T") && (state == 2) && (done == false)){
            state = 3
            reso[j] = count
+           buckets.allocate(count)
            done = "T"
         }
         if((res == "H") && (state == 2) && (done == false)){
@@ -121,6 +157,7 @@ function ht(numbTrials) {
    	     }	
      }
     }
+    console.log(buckets)
      var x = findAvg(reso)
      displayAvg(x,reso);
    }  
