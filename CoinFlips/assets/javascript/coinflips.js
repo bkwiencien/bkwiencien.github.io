@@ -4,32 +4,32 @@ var buckets = {
   init:    function() {
     this.varray = []
     this.temp   = []
-    this.temp = [0,'bucket1']
+    this.temp = ['bucket1(2-6)flips',0]
     this.varray.push(this.temp),
-    this.temp = [0,'bucket2']
+    this.temp = ['bucket2(7-10)flips',0]
     this.varray.push(this.temp)
-    this.temp = [0,'bucket3']
+    this.temp = ['bucket3(11-15)flips',0]
     this.varray.push(this.temp)
-    this.temp = [0,'bucket4']
+    this.temp = ['bucket4(16-20)flips',0]
     this.varray.push(this.temp)
-    this.temp = [0,'bucket5']
+    this.temp = ['bucket5(21 or more)flips',0]
     this.varray.push(this.temp)
   },
   allocate: function(v){
     if ((v>1) && (v<=6)) {
-      this.varray[0][0]++
+      this.varray[0][1]++
     }
     if ((v>6) && (v<=10)) {
-      this.varray[1][0]++
+      this.varray[1][1]++
     }
     if ((v>10) && (v<=15)) {
-      this.varray[2][0]++
+      this.varray[2][1]++
     }
     if ((v>15) && (v<=20)) {
-      this.varray[3][0]++
+      this.varray[3][1]++
     }
     if (v>=21) {
-      this.varray[4][0]++
+      this.varray[4][1]++
     }
   }
 }
@@ -71,13 +71,17 @@ function plotEm() {
       var data = google.visualization.arrayToDataTable(buckets.varray,true)
       console.log("data = " + data)
       var options = {
-          title: 'breakdown of flips',
           title: 'Flip distribution',
           legend: { position: 'none' },
           isStacked: false,
-          histogram: { lastBucketPercentile: 5 },
+          histogram: { lastBucketPercentile: 10 },
           //vAxis: { scaleType: 'mirrorLog' },
-          histogram: { bucketSize: 10 }
+          histogram: {
+             bucketSize: 0.02,
+             maxNumBuckets: 200,
+             minValue: 0,
+             maxValue: 100
+           },
         };
        var chart = new google.visualization.Histogram(document.getElementById('results'));
         chart.draw(data, options);
