@@ -12,7 +12,9 @@ var buckets = {
     this.varray.push(this.temp)
     this.temp = ['bucket4(16-20)flips',0]
     this.varray.push(this.temp)
-    this.temp = ['bucket5(21 or more)flips',0]
+    this.temp = ['bucket5(21 or 25)flips',0]
+    this.varray.push(this.temp)
+    this.temp = ['buckets(25-30)fipe',0]
     this.varray.push(this.temp)
   },
   allocate: function(v){
@@ -28,7 +30,10 @@ var buckets = {
     if ((v>15) && (v<=20)) {
       this.varray[3][1]++
     }
-    if (v>=21) {
+    if ((v>20) && (v<=25)) {
+      this.varray[4][1]++
+    }
+    if ((v>25) && (v<=30)) {
       this.varray[4][1]++
     }
   }
@@ -74,11 +79,11 @@ function plotEm() {
           title: 'Flip distribution',
           legend: { position: 'none' },
           isStacked: false,
-          histogram: { lastBucketPercentile: 10 },
+          histogram: { lastBucketPercentile: 5 },
           //vAxis: { scaleType: 'mirrorLog' },
           histogram: {
-             bucketSize: 0.02,
-             maxNumBuckets: 200,
+             bucketSize: .75,
+             maxNumBuckets: 20,
              minValue: 0,
              maxValue: 100
            },
