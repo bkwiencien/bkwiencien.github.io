@@ -2,22 +2,17 @@ $(document).ready(function(){
 
 
 
-$("body").css("cursor", "progress");
-
-var name = localStorage.getItem("userName");
-localStorage.removeItem("userName");
-var st= localStorage.getItem("stocksList");
-localStorage.removeItem("stocksList");
+//$("body").css("cursor", "progress");
+// quincy hacks
+console.log('i am here')
+setTimeout(function(){
+    reset();
+     }, 2000);
+window.location.href = 'plot.html';
 
 var id = localStorage.getItem("symbol");
-localStorage.removeItem("symbol");
 var stockName = localStorage.getItem("Name");
-localStorage.removeItem("Name");
-if (id == null) {
-  localStorage.setItem("userName",name);
-  localStorage.setItem("stocksList",st);
-  window.open ('../home/home.html','_self',false);
-}
+
 document.title = "Stock Price: "+ stockName
 
 $('#hourly').addClass('active');
@@ -27,11 +22,13 @@ function successCallback(){
     $('.main').css('visibility','visible');
 }
 function failureCallback(){
-  alert('lost connecton');
+  //alert('lost connecton');
+  console.log("lost connection")
 
   localStorage.setItem("userName",name);
   localStorage.setItem("stocksList",st);
-  window.open ('../home/home.html','_self',false);
+ // window.open ('../home/home.html','_self',false);
+   window.open("index.html",'_self',false)
 
 }
 
