@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Bob Kwiencien Stock page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="initialize()">
+<div class="container" id="container1">
+	<center><h1><strong>Graph Stock Performance</strong></h1></center>
+</div>	
+<div class="grid-container">
+  <div class="grid-item" id="Apple:APPL">
+      <label for="apple"><i>Apple</i></label>
+  		<img id="apple" src="assets/images/apple-icon.png">
+  </div>	
+  <div	class="grid-item" id="Amex:AXP">
+        <label for="amex"><i>American Express</i></label>
+  	    <img id="amex" src="assets/images/amex.jpeg">
+  </div>
+  <div class="grid-item" id="Boeing:BA">
+        <label for="boeing"><i>Boeing</i></label>
+        <img id="boeing" src="assets/images/boeing.jpeg">
+  </div>
+  <div class="grid-item" id="Caterpillar:CAT">
+   <label for="cat"><i>Caterpillar</i></label> 
+   <img  id="cat" src="assets/images/cat.jpeg"> 
+  </div> 
+  <div class="grid-item" id="Chevron:CVX">
+     <label for="chevron"><i>Chevron</i></label>
+     <img id="chevron" src="assets/images/chevron.jpeg">
+  </div>
+  <div class="grid-item" id="Cisco:CSCO">
+      <label for="cisco"><i>Cisco</i></label>
+      <img id="cisco" src="assets/images/cisco.jpeg">
+  </div>  
+  <div class="grid-item" id="Coca-cola:KO">
+      <label for="coke"><i>Coca-cola</i></label>
+      <img  id="coke" src="assets/images/coke.png">
+  </div>
+  <div class="grid-item" id="Home Depot:HD">
+      <label for="depot"><i>Home Depot</i></label>
+      <img id="depot" src="assets/images/depot.jpeg">
+  </div>  
+  <div class="grid-item" id="Disney:DIS">
+       <label for="disney"><i>Disney</i></label>
+       <img id="disney" src="assets/images/disney.png">
+  </div>  
+  <div class="grid-item" id="McDonalds:MCD">
+      <label for="donalds"><i>McDonalds</i></label>
+      <img id="donalds" src="assets/images/donalds.jpeg">
+  </div> 
+  <div class="grid-item" id="Merck:MRK">
+       <label for="merck"><i>Merck</i></label>
+       <img id="merck" src="assets/images/merck.jpeg">
+  </div>  
+  <div class="grid-item" id="Dupont:DWDP">
+       <label for="dupont"><i>Dupont</i></label>
+       <img id="dupont" src="assets/images/dupont.jpeg">
+  </div>  
+  <div class="grid-item" id="Exxon:XOM">
+       <label for="exxon"><i>Exxon</i></label>
+       <img id="exxon" src="assets/images/exxon.jpeg">
+  </div>  
+  <div class="grid-item" id="IBM:IBM">
+        <label for="ibm"><i>IBM</i></label>
+        <img id="ibm" src="assets/images/ibm.jpeg">
+  </div>
+  <div class="grid-item" id="Intel:INTC">
+        <label for="intel"><i>Intel</i></label>
+        <img id="intel" src="assets/images/intel.png">
+  </div>
+  <div class="grid-item" id="Johnson \& Johnson:JNJ">
+        <label for="johnson"><i>Johnson and Johnson</i></label>
+        <img id="johnson" src="assets/images/johnson.png">
+  </div>
+    <div class="grid-item" id="Microsoft:MSFT">
+        <label for="microsoft"><i>Microsoft</i></label>
+        <img id="microsoft" src="assets/images/microsoft.jpeg">
+  </div>
+   <div class="grid-item" id="Nike:NKE">
+        <label for="nike"><i>Nike</i></label>
+        <img id="nike" src="assets/images/nike.jpeg">
+  </div>
+  <div class="grid-item" id="Pfizer:PFE">
+        <label for="pfizer"><i>Pfizer</i></label>
+        <img id="pfizer" src="assets/images/pfizer.jpeg">
+  </div>
+  <div class="grid-item" id="Procter & Gamble:PG">
+        <label for="procter"><i>Procter and Gamble</i></label>
+        <img id="procter" src="assets/images/procter.png">
+  </div>
+   <div class="grid-item" id="Sachs:GS">
+        <label for="sachs"><i>Goldman Sachs</i></label>
+        <img id="sachs" src="assets/images/sachs.jpeg">
+  </div>
+  <div class="grid-item" id="Travelers:TRV">
+        <label for="travelers"><i>Travelers</i></label>
+        <img id="travelers" src="assets/images/travellers.jpeg">
+  </div>
+   <div class="grid-item" id="United:UAL">
+        <label for="united"><i>United</i></label>
+        <img id="united" src="assets/images/united.jpeg">
+  </div>
+   <div class="grid-item" id="VerizonVZ">
+        <label for="verizon"><i>Verizon</i></label>
+        <img id="verizon" src="assets/images/verizon.jpeg">
+  </div>
+   <div class="grid-item" id="Walgreens:WBA">
+        <label for="walgreens"><i>Walgreens</i></label>
+        <img id="walgreens" src="assets/images/walgreens.jpeg">
+  </div>
+  <div class="grid-item" id="Walmart:WMT">
+        <label for="walmart"><i>Walmart</i></label>
+        <img id="walmart" src="assets/images/walmart.jpeg">
+  </div>
+  <div class="grid-item" id="Visa:V">
+        <label for="visa"><i>Visa</i></label>
+        <img id="visa" src="assets/images/visa.jpeg">
+  </div>
+  <div class="grid-item" id="UnitedHealth group:UNH">
+        <label for="uhc"><i>United-Healthcare-Group</i></label>
+        <img id="uhg" src="assets/images/United-Healthcare-Group.jpg">
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="assets/javascript/stock.js"></script>
+</body>
+</html>

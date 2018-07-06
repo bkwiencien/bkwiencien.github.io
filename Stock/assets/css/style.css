@@ -1,0 +1,129 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+#container1 {
+	color: white;
+	background-color: #2253AF;
+}
+#amex {
+	width: 60px;
+	height: 60px;
+}
+#apple {
+	width: 70px;
+	height: 70px;
+}
+#boeing {
+	width: 80px;
+	height: 80px;
+}
+#cat {
+  width: 70px;
+  height: 70px;
+}
+#chevron {
+  width: 70px;
+  height: 70px;
+}
+#cisco {
+  width: 60px;
+  height: 60px;
+}
+#coke {
+  width: 60px;
+  height: 60px;
+}
+#depot {
+  width: 60px;
+  height: 60px;
+}
+#disney {
+  width: 60px;
+  height: 60px;
+}
+#donalds {
+  width: 80px;
+  height: 80px;
+}
+#merck {
+  width: 60px;
+  height: 60px;
+}
+#dupont {
+  width: 80px;
+  height: 80px;
+}
+#exxon {
+  width: 70px;
+  height: 70px;
+}
+#ibm {
+  width: 60px;
+  height: 60px;
+}
+#intel {
+  width: 60px;
+  height: 60px;
+}
+#johnson {
+  width: 100px;
+  height: 100px;
+}
+#microsoft {
+  width: 60px;
+  height: 60px;
+}
+#nike {
+  width: 60px;
+  height: 60px;
+}
+#pfizer {
+  width: 60px;
+  height: 60px;
+}
+#procter {
+  width: 60px;
+  height: 60px;
+}
+#travelers {
+  width: 60px;
+  height: 60px;
+}
+#sachs {
+  width: 60px;
+  height: 60px;
+}
+#united {
+  width: 60px;
+  height: 60px;
+}
+#verizon {
+  width: 60px;
+  height: 60px;
+}
+#walgreens {
+  width: 60px;
+  height: 60px;
+}
+#walmart {
+  width: 60px;
+  height: 60px;
+}
+#visa {
+  width: 60px;
+  height: 60px;
+}
+#uhg {
+  width: 60px;
+  height: 60px;
+}
