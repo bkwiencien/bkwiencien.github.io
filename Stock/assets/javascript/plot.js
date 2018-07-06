@@ -112,7 +112,7 @@ function LastDay(symbol, name) {
   console.log('in LastDay');
     $("body").css("cursor", "progress");
     var quote;
-    // var symbol = 'INX';
+    console.log("in LastDay symbol = " + symbol)
     var queryURL =  "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+symbol+"&interval=5min&apikey=7L0FQQQ21X7JAJUX";
 
     $.ajax({url: queryURL, method: 'GET'}).done(function(response){
