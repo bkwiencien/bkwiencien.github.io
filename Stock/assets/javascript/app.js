@@ -1,5 +1,4 @@
 $(document).ready(function(){ 
-alert("in app.js")
 
 
 //$("body").css("cursor", "progress");
