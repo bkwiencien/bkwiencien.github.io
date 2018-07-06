@@ -25,7 +25,8 @@ function failureCallback(){
    window.open("index.html")
 
 }
-let promise = LastHour(id, stockName).then(successCallback, failureCallback);
+let promise = LastHour(id, stockName).then(successCallback, failureCallback); 
+<!-- let promise = LastDay(id, stockName).then(successCallback, failureCallback); -->
 
 $('#hourly').on("click", function(event) {
   $('.active').removeClass('active');
