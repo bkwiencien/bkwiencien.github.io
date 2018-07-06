@@ -1,14 +1,12 @@
 $(document).ready(function(){ 
-
+alert("in app.js")
 
 
 //$("body").css("cursor", "progress");
 // quincy hacks
 console.log('i am here')
-setTimeout(function(){
-    reset();
-     }, 2000);
-window.location.href = 'plot.html';
+// quincy hack
+//window.location.href = 'plot.html';
 
 var id = localStorage.getItem("symbol");
 var stockName = localStorage.getItem("Name");
@@ -22,16 +20,12 @@ function successCallback(){
     $('.main').css('visibility','visible');
 }
 function failureCallback(){
-  //alert('lost connecton');
+  alert('lost connecton');
   console.log("lost connection")
-
-  localStorage.setItem("userName",name);
-  localStorage.setItem("stocksList",st);
  // window.open ('../home/home.html','_self',false);
-   window.open("index.html",'_self',false)
+   window.open("index.html")
 
 }
-
 let promise = LastHour(id, stockName).then(successCallback, failureCallback);
 
 $('#hourly').on("click", function(event) {

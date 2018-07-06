@@ -1,8 +1,9 @@
 
 function LastHour(symbol, name) {  
+    console.log('in LastHour')
     $("body").css("cursor", "progress");
     var quote;
-    // var symbol = 'INX';
+    var symbol = 'APPL';
     var queryURL =  "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+symbol+"&interval=1min&apikey=7L0FQQQ21X7JAJUX";
 
     return $.ajax({url: queryURL, method: 'GET'}).done(function(response){
@@ -109,6 +110,7 @@ $('#chart_div').on('plotly_click', function(){
 });
 
 function LastDay(symbol, name) {  
+  console.log('in LastDay');
     $("body").css("cursor", "progress");
     var quote;
     // var symbol = 'INX';
