@@ -12,6 +12,9 @@ height: 100px;
 width 50px;
 color: white;
 }
+#class2 {
+	background-color: #2253AF;
+}
 #section2{
 background-color: #2253AF;
 width: 29%;
@@ -21,7 +24,9 @@ color: white;
 }
 #imagesection{
 width: 29%;
+margin: 10px;
 }
+
 #openingremarks {
 	color: white;
 	background-color: #2253AF
@@ -32,5 +37,17 @@ width: 29%;
    height: 100px;
    color: white;
    font-size: 60px;
+}
+.buffer {
+	color: #2253AF;
+}
+#wins {
+	color: white;
+}
+#loses {
+	color: white;
+}
+.selection {
+	margin: 20px;
 }
 
