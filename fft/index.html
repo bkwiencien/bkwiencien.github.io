@@ -17,15 +17,16 @@
 		  	<label for="choosefreq" id="label1"> choose frequency of input:</label>
 		  	<form>
 		  	<select name="frequency" id="choosefreq">
-              <option value="10">10 cysles/sec</option>
-              <option value="15">15 cycles/sec</option>
-              <option value="20">20 cycles/sec</option>
-              <option value="25">25 cyces/sec</option>
+              <option value="10">5 cycles/sec</option>
+              <option value="15">10 cycles/sec</option>
+              <option value="20">15 cycles/sec</option>
+              <option value="25">20 cycles/sec</option>
             </select>
-            <input type="button" class="btn btn-primary" id="button1" value="submit frequency">
+            <input type="button" class="btn btn-primary" id="button1" value="submit frequency"onclick="sineWave.generateData()">
            </form>
 		  </div>	
 	</div>
+	<div id="sineplot"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
