@@ -17,6 +17,20 @@ var sineWave = {
 		var e = document.getElementById("choosefreq");
 		var strFreq = e.options[e.selectedIndex].text;
 		this.freq=parseInt(strFreq)
+		trace1 = {
+         x: [],
+         y: [],
+         line: {
+          color: 'rgba (31, 119, 180, 1)', 
+          dash: 'solid', 
+          width: 1.5
+         }, 
+        mode: 'lines', 
+        name: '_line0', 
+        type: 'scatter', 
+        xaxis: 'x1', 
+        yaxis: 'y1',
+       };  // end of trace1
 		var layout = {
 	    x: [],
 	    y: [],		
@@ -32,6 +46,7 @@ var sineWave = {
         showgrid: true,
         range: [-1,1],
         autorange: false,
+        showline: true,
         },
       height: 598,
       width: 1080,
@@ -40,14 +55,15 @@ var sineWave = {
      }
 		for (var j=0;j<150;j++) {
 			this.xAxis.push(theta)
-			this.yAxis.push(Math.sin(2*theta*Math.PI/this.freq))
-			console.log(Math.sin(2*theta*Math.PI/this.freq))
+			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq))
 			theta = theta + .048
 		}
 		dd = [this.xAxis,this.yAxis]
 		Plotly.purge('sineplot');
-		console.log("after purge " + dd)
-		Plotly.plot('sineplot',dd,layout)
+		trace1.x = this.xAxis
+		trace1.y = this.yAxis
+		var data = [trace1]
+		Plotly.plot('sineplot',{data: data,layout:layout})
 	    $("body").css("cursor", "default");
 
 	},
