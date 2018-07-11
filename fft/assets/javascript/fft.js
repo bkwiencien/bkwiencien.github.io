@@ -11,6 +11,9 @@ var sineWave = {
 		this.yAxis = []
 		this.freq = 0
 	},
+	clear: function(pplot) {
+		Plotly.purge(pplot)
+	},
 	generateData: function() {
 		var theta = 0.0
 		var dd = []
@@ -61,17 +64,13 @@ var sineWave = {
 			theta = theta + base/this.freq
 		}
 		dd = [this.xAxis,this.yAxis]
-		Plotly.purge('sineplot');
 		trace1.x = this.xAxis
 		trace1.y = this.yAxis
 		var data = [trace1]
-		Plotly.plot('sineplot',{data: data,layout:layout})
-	    $("body").css("cursor", "default");
+		this.clear('sineplot')
+		Plotly.newPlot('sineplot',{data: data,layout:layout})
 
 	},
-}
-function clear(pplot) {
-	Plotly.purge(pplot)
 }
 function initialize() {
 	console.log("initialize")
