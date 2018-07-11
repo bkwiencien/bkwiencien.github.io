@@ -17,7 +17,7 @@ var sineWave = {
 		var e = document.getElementById("choosefreq");
 		var strFreq = e.options[e.selectedIndex].text;
 		this.freq=parseInt(strFreq)
-		trace1 = {
+		var trace1 = {
          x: [],
          y: [],
          line: {
@@ -26,7 +26,7 @@ var sineWave = {
           width: 1.5
          }, 
         mode: 'lines', 
-        name: '_line0', 
+        name: 'plot freq '+ this.freq, 
         type: 'scatter', 
         xaxis: 'x1', 
         yaxis: 'y1',
@@ -67,6 +67,9 @@ var sineWave = {
 	    $("body").css("cursor", "default");
 
 	},
+}
+function clear(pplot) {
+	Plotly.purge(pplot)
 }
 function initialize() {
 	console.log("initialize")
