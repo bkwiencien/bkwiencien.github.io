@@ -14,6 +14,8 @@ var sineWave = {
 	generateData: function() {
 		var theta = 0.0
 		var dd = []
+		var base = .048
+		var baseNumb = 150
 		var e = document.getElementById("choosefreq");
 		var strFreq = e.options[e.selectedIndex].text;
 		this.freq=parseInt(strFreq)
@@ -53,10 +55,10 @@ var sineWave = {
       autosize: true,
       showlegend: true,
      }
-		for (var j=0;j<150;j++) {
+		for (var j=0;j<baseNumb*this.freq;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq))
-			theta = theta + .048
+			theta = theta + base/this.freq
 		}
 		dd = [this.xAxis,this.yAxis]
 		Plotly.purge('sineplot');
