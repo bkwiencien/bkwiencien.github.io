@@ -13,6 +13,9 @@ var sineWave = {
 	},
 	clear: function(pplot) {
 		Plotly.purge(pplot)
+      //  $("#sineplot").remove();
+      //  console.log('about to append div')
+      //  $("#displaydiv").append("<div id='sineplot'></div>")
 	},
 	generateData: function() {
 		var theta = 0.0
