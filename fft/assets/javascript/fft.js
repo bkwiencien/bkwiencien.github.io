@@ -5,13 +5,12 @@ var sineWave = {
 	freq2:        0,
 	hfreq:        0,
 	pi:          Math.PI,
-	getInput: function (){
-		console.log("in getInput")
-	},
 	init: function() {
 		this.xAxix = []
 		this.yAxis = []
 		this.freq1 = 0
+		this.freq2 = 0
+		this.hfreq = 0
 	},
 	generateData: function() {
 		var theta = 0.0
@@ -24,7 +23,6 @@ var sineWave = {
 		var e = document.getElementById("choosefreqa");
 		var strFreq1 = e.options[e.selectedIndex].text;
 		this.freq2=parseInt(strFreq1)
-		console.log("freq2 is " + this.freq2)
 		if (this.freq1 >= this.freq2){
 			this.hfreq = this.freq1 } else {
 		    this.hfreq = this.freq2		
@@ -67,7 +65,7 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
-		for (var j=0;j<baseNumb*this.hfreq;j++) {
+		for (var j=0;j<2*baseNumb*this.hfreq;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
 			theta = theta + base/this.hfreq
