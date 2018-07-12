@@ -81,16 +81,15 @@ function yesNo() {
 	var aa = 1
 	var newPick = null
 	var aa = $("input[name='yesno']:checked").val();
-	console.log("answer is " + aa)
 	$("#button2").prop('disabled',true)
 	if (aa == "N") {
         if (doorPicked.contents=="goat") {
         	loses++;
         	probability=parseFloat(wins/(wins+loses))
-        	console.log("probability = " + probability)
+        	console.log("probability = " + probability + " " + probability.toFixed(3))
         	$('#'+doorPicked.imageid).attr('src','assets/images/goat.jpg')
         	$("#ploses").text("loses " + loses)
-        	$("#probability").text("proability of success " + probability)
+        	$("#probability").text("proability of success " + probability.toFixed(3))
 
         } else {
         	if (doorPicked.contents=="PRIZE") {
@@ -99,13 +98,12 @@ function yesNo() {
         		console.log("probability = " + probability)
         		$('#'+doorPicked.imageid).attr('src','assets/images/car.jpg')
         		$("#pwins").text("wins " + wins)
-        		$("#probability").text("proability of success " + probability)
+        		$("#probability").text("proability of success " + probability.toFixed(3))
 
         	}
         }
 	}
 	if (aa == "Y") {
-		console.log("need switch logic")
 		for (i=0;i<3;i++) {
 			if ((doors[i].chosen != true) && (doors[i].opened!=true)) {
 				newPick=doors[i]
@@ -113,13 +111,13 @@ function yesNo() {
 					wins++
 					probability=parseFloat(wins/(wins+loses))
 					$("#pwins").text("wins " + wins)
-					$("#probability").text("proability of success " + probability)
+					$("#probability").text("proability of success " + probability.toFixed(3))
                     $('#'+newPick.imageid).attr('src','assets/images/car.jpg')
 				} else {
 					loses++;
 					$("#ploses").text("loses " + loses)
 					probability=parseFloat(wins/(wins+loses))
-					$("#probability").text("proability of success " + probability)
+					$("#probability").text("proability of success " + probability.toFixed(3))
 					$('#'+newPick.imageid).attr('src','assets/images/goat.jpg')
 
 				}
@@ -129,7 +127,7 @@ function yesNo() {
 	}
 	setTimeout(function(){
     reset();
-     }, 2000);
+     }, 1000);
 	 
 
 }
@@ -148,12 +146,10 @@ function btnPress() {
 		$("#dialog").text("You must chose a door")
     } else {		
 	   var w = doors[ind]
-	   console.log("ind = " + ind)
 	   w.choseMe()
 	   $("#dialog").text("You picked " + w.name)
 	   doorPicked = w
 	   findAChoice()
-	   console.log('do the show')
 	   $("#question").text(availableToShow[0].name + " has a goat do you want to switch?")
 	   changeToGoatImage(availableToShow[0])
 	   $("#button1").prop('disabled',true)
@@ -161,7 +157,6 @@ function btnPress() {
 	}   
 }
 function changeToGoatImage(w) {
-	console.log("in changeToGoatImage " + w.imageid)
 	w.opened = true
 	$('#'+w.imageid).attr('src','assets/images/goat.jpg')
 }
@@ -170,8 +165,6 @@ function findAChoice() {
 		w=doors[j]
 		if ((w.contents=='goat') && (w.chosen==false)) {
 			availableToShow.push(w)
-			console.log("available is " + w.name)
-
 	}
 }
 }
@@ -179,7 +172,6 @@ function setThePrize() {
 	var n = parseInt((Math.random()*100)%3)
 	var w = doors[n]
 	w.setPrize()
-	console.log("doorWithPrize is " + w.name)
 	doorWithPrize = n+1
 }
 function initialize() {
@@ -188,7 +180,6 @@ function initialize() {
 	reset()
 }
 function reset() {
-	console.log("in reset")
 	for (j=0;j<3;j++){
 		doors[j].reset()
 	}
