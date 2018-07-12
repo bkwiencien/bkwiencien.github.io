@@ -11,12 +11,6 @@ var sineWave = {
 		this.yAxis = []
 		this.freq = 0
 	},
-	clear: function(pplot) {
-		Plotly.purge(pplot)
-      //  $("#sineplot").remove();
-      //  console.log('about to append div')
-      //  $("#displaydiv").append("<div id='sineplot'></div>")
-	},
 	generateData: function() {
 		var theta = 0.0
 		var dd = []
@@ -61,6 +55,8 @@ var sineWave = {
       autosize: true,
       showlegend: true,
      }
+        this.xAxis = []
+        this.yAxis = []
 		for (var j=0;j<baseNumb*this.freq;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq))
@@ -70,7 +66,6 @@ var sineWave = {
 		trace1.x = this.xAxis
 		trace1.y = this.yAxis
 		var data = [trace1]
-		this.clear('sineplot')
 		Plotly.newPlot('sineplot',{data: data,layout:layout})
 
 	},
