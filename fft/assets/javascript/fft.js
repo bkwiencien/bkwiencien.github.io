@@ -1,7 +1,9 @@
 var sineWave = {
 	xAxis: [],
 	yAxis: [],
-	freq:        0,
+	freq1:        0,
+	freq2:        0,
+	hfreq:        0,
 	pi:          Math.PI,
 	getInput: function (){
 		console.log("in getInput")
@@ -9,7 +11,7 @@ var sineWave = {
 	init: function() {
 		this.xAxix = []
 		this.yAxis = []
-		this.freq = 0
+		this.freq1 = 0
 	},
 	generateData: function() {
 		var theta = 0.0
@@ -17,8 +19,16 @@ var sineWave = {
 		var base = .048
 		var baseNumb = 150
 		var e = document.getElementById("choosefreq");
-		var strFreq = e.options[e.selectedIndex].text;
-		this.freq=parseInt(strFreq)
+		var strFreq1 = e.options[e.selectedIndex].text;
+		this.freq1=parseInt(strFreq1)
+		var e = document.getElementById("choosefreqa");
+		var strFreq1 = e.options[e.selectedIndex].text;
+		this.freq2=parseInt(strFreq1)
+		console.log("freq2 is " + this.freq2)
+		if (this.freq1 >= this.freq2){
+			this.hfreq = this.freq1 } else {
+		    this.hfreq = this.freq2		
+		}
 		var trace1 = {
          x: [],
          y: [],
@@ -28,7 +38,7 @@ var sineWave = {
           width: 1.5
          }, 
         mode: 'lines', 
-        name: 'plot freq '+ this.freq, 
+        name: 'plot freq '+ this.freq1 + " " + this.freq2, 
         type: 'scatter', 
         xaxis: 'x1', 
         yaxis: 'y1',
@@ -36,7 +46,7 @@ var sineWave = {
 		var layout = {
 	    x: [],
 	    y: [],		
-        title: "Sine plot " + this.freq,
+        title: "combined plot " + this.freq1 + " " + this.freq2,
         xaxis: {
         type: "scatter",
         showgrid: true,
@@ -46,7 +56,7 @@ var sineWave = {
         yaxis: {
         type: "scatter",
         showgrid: true,
-        range: [-1,1],
+        range: [-2,2],
         autorange: false,
         showline: true,
         },
@@ -57,10 +67,10 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
-		for (var j=0;j<baseNumb*this.freq;j++) {
+		for (var j=0;j<baseNumb*this.hfreq;j++) {
 			this.xAxis.push(theta)
-			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq))
-			theta = theta + base/this.freq
+			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
+			theta = theta + base/this.hfreq
 		}
 		dd = [this.xAxis,this.yAxis]
 		trace1.x = this.xAxis
