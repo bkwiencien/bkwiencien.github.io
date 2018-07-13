@@ -75,10 +75,17 @@ var sineWave = {
 		trace1.y = this.yAxis
 		var data = [trace1]
 		Plotly.newPlot('sineplot',{data: data,layout:layout})
+		$("#label3").show()
+		$("#fft").show()
 
 	},
+	fft: function () {
+		console.log('in fft')
+	}
 }
 function initialize() {
 	console.log("initialize")
+	$("#label3").hide()
+	$("#fft").hide()
 	sineWave.init()
 }
