@@ -77,10 +77,10 @@ var sineWave = {
 		Plotly.newPlot('sineplot',{data: data,layout:layout})
 		$("#label3").show()
 		$("#fft").show()
-
 	},
 	fft: function () {
 		console.log('in fft')
+		window.open("plot.html","_blank")
 	}
 }
 function initialize() {
