@@ -1,6 +1,7 @@
 var sineWave = {
 	xAxis: [],
 	yAxis: [],
+	tyAxis: [],
 	freq1:        0,
 	freq2:        0,
 	hfreq:        0,
@@ -8,6 +9,7 @@ var sineWave = {
 	init: function() {
 		this.xAxix = []
 		this.yAxis = []
+		this.tyAxis = []
 		this.freq1 = 0
 		this.freq2 = 0
 		this.hfreq = 0
@@ -80,9 +82,46 @@ var sineWave = {
 	},
 	fft: function () {
 		console.log('in fft')
-		window.open("plot.html","_blank")
+		var win = window.open("plot.html","_blank")
+		win.focus()
+		var trace2 = {
+         x: [],
+         y: [],
+         line: {
+          color: 'rgba (31, 119, 180, 1)', 
+          dash: 'solid', 
+          width: 1.5
+         }, 
+        mode: 'lines', 
+        name: '--------', 
+        type: 'scatter', 
+        xaxis: 'x1', 
+        yaxis: 'y1',
+       };  // end of trace1
+       var layout = {
+	    x: [],
+	    y: [],		
+        title: "combined plot " + this.freq1 + " " + this.freq2,
+        xaxis: {
+        type: "scatter",
+        showgrid: true,
+        range: [0,2*this.pi],
+        autorange: false,
+        },
+        yaxis: {
+        type: "scatter",
+        showgrid: true,
+        range: [-2,2],
+        autorange: false,
+        showline: true,
+        },
+      height: 598,
+      width: 1080,
+      autosize: true,
+      showlegend: true,
+     }
 	}
-}
+}	
 function initialize() {
 	console.log("initialize")
 	$("#label3").hide()
