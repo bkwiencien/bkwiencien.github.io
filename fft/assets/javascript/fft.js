@@ -1,7 +1,6 @@
 var sineWave = {
 	xAxis: [],
 	yAxis: [],
-	tyAxis: [],
 	freq1:        0,
 	freq2:        0,
 	hfreq:        0,
@@ -9,7 +8,6 @@ var sineWave = {
 	init: function() {
 		this.xAxix = []
 		this.yAxis = []
-		this.tyAxis = []
 		this.freq1 = 0
 		this.freq2 = 0
 		this.hfreq = 0
@@ -67,7 +65,8 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
-		for (var j=0;j<2*baseNumb*this.hfreq;j++) {
+		//for (var j=0;j<2*baseNumb*this.hfreq;j++) {
+    for (var j=0;j<4096;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
 			theta = theta + base/this.hfreq
@@ -80,11 +79,16 @@ var sineWave = {
 		$("#label3").show()
 		$("#fft").show()
 	},
-	fft: function () {
-		console.log('in fft')
-		var win = window.open("plot.html","_blank")
-		win.focus()
-		var trace2 = {
+}
+var ffto = {
+  amplitudes:  [],
+  init: function() {
+    this.amplitudes = []
+  },
+  generateFFT: function() {
+    var win = window.open("plot.html","_blank")
+    win.focus()
+    var trace2 = {
          x: [],
          y: [],
          line: {
@@ -97,15 +101,15 @@ var sineWave = {
         type: 'scatter', 
         xaxis: 'x1', 
         yaxis: 'y1',
-       };  // end of trace1
+       };  // end of trace2
        var layout = {
-	    x: [],
-	    y: [],		
-        title: "combined plot " + this.freq1 + " " + this.freq2,
+      x: [],
+      y: [],    
+        title: "fft plot ",
         xaxis: {
         type: "scatter",
         showgrid: true,
-        range: [0,2*this.pi],
+        range: [0,30],
         autorange: false,
         },
         yaxis: {
@@ -120,8 +124,8 @@ var sineWave = {
       autosize: true,
       showlegend: true,
      }
-	}
-}	
+  },
+}
 function initialize() {
 	console.log("initialize")
 	$("#label3").hide()
