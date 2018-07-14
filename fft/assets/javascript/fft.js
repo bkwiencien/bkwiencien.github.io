@@ -3,6 +3,7 @@ var sineWave = {
 	yAxis: [],
 	freq1:        0,
 	freq2:        0,
+  freq3:        0,
 	hfreq:        0,
 	pi:          Math.PI,
 	init: function() {
@@ -10,6 +11,7 @@ var sineWave = {
 		this.yAxis = []
 		this.freq1 = 0
 		this.freq2 = 0
+    this.freq3 = 0;
 		this.hfreq = 0
 	},
   getAxis: function() {
@@ -28,11 +30,18 @@ var sineWave = {
 		this.freq1=parseInt(strFreq1)
 		var e = document.getElementById("choosefreqa");
 		var strFreq1 = e.options[e.selectedIndex].text;
-		this.freq2=parseInt(strFreq1)
+    this.freq2=parseInt(strFreq1)
+    var e = document.getElementById("choosefreqb");
+    var strFreq1 = e.options[e.selectedIndex].text;
+		this.freq3=parseInt(strFreq1)
 		if (this.freq1 >= this.freq2){
 			this.hfreq = this.freq1 } else {
 		    this.hfreq = this.freq2		
 		}
+    if (this.freq3 > this.hfreq) {
+      this.hfreq = this.freq3
+    }
+
 		var trace1 = {
          x: [],
          y: [],
@@ -42,7 +51,7 @@ var sineWave = {
           width: 1.5
          }, 
         mode: 'lines', 
-        name: 'plot freq '+ this.freq1 + " " + this.freq2, 
+        name: 'plot freq '+ this.freq1 + " " + this.freq2 + " " + this.freq3, 
         type: 'scatter', 
         xaxis: 'x1', 
         yaxis: 'y1',
@@ -50,7 +59,7 @@ var sineWave = {
 		var layout = {
 	    x: [],
 	    y: [],		
-        title: "combined plot " + this.freq1 + " " + this.freq2,
+        title: "combined plot " + this.freq1 + " " + this.freq2 + " " + this.freq3,
         xaxis: {
         type: "scatter",
         showgrid: true,
@@ -60,7 +69,7 @@ var sineWave = {
         yaxis: {
         type: "scatter",
         showgrid: true,
-        range: [-2,2],
+        range: [-3,3],
         autorange: false,
         showline: true,
         },
@@ -71,9 +80,10 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
+    theta = 0    
     for (var j=0;j<16384;j++) {
 			this.xAxis.push(theta)
-			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
+			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2)+Math.sin(2*theta*Math.PI*this.freq3))
 			theta = theta + base/(this.hfreq)
 		}
 		dd = [this.xAxis,this.yAxis]
@@ -133,7 +143,7 @@ var ffto = {
 }
 function initialize() {
 	console.log("initialize")
-	$("#label3").hide()
+	$("#label4").hide()
 	$("#fft").hide()
 	sineWave.init()
 }
