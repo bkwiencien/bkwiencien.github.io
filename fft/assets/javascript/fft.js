@@ -54,7 +54,7 @@ var sineWave = {
         xaxis: {
         type: "scatter",
         showgrid: true,
-        range: [0,6*this.pi],
+        range: [0,2*this.pi],
         autorange: false,
         },
         yaxis: {
@@ -71,11 +71,10 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
-		//for (var j=0;j<2*baseNumb*this.hfreq;j++) {
-    for (var j=0;j<8192;j++) {
+    for (var j=0;j<16384;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
-			theta = theta + base/this.hfreq
+			theta = theta + base/(this.hfreq)
 		}
 		dd = [this.xAxis,this.yAxis]
 		trace1.x = this.xAxis
