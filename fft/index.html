@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Bob Kwiencien FFT</title>
+  <title>FFT</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,9 @@
               <option value="25">20 cycles/sec</option>
               <option value="30">30 cycles/sec></option>
             </select>
-            <input type="button" class="btn btn-primary" id="button1" value="produce graph"onclick="sineWave.generateData()">
+            <input type="button" class="btn btn-primary" id="button1" value="produce graph" onclick="sineWave.generateData()">
+            <label for="fft" id="label3">FFT:</label>
+            <input type="button" class="btn btn-primary" id="fft" value="producee fft" onclick="ffto.generateFFT()">
            </form>
 		  </div>	
 	</div>
@@ -49,6 +51,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.0.1/math.min.js"></script>
 <script src="assets/javascript/fft.js"></script>
 </body>
 </html>

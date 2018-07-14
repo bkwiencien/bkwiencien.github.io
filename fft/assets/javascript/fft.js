@@ -12,6 +12,12 @@ var sineWave = {
 		this.freq2 = 0
 		this.hfreq = 0
 	},
+  getAxis: function() {
+    var res = []
+    res.push(this.xAxis)
+    res.push(this.yAxis)
+    return(res)
+  },
 	generateData: function() {
 		var theta = 0.0
 		var dd = []
@@ -65,20 +71,69 @@ var sineWave = {
      }
         this.xAxis = []
         this.yAxis = []
-		for (var j=0;j<2*baseNumb*this.hfreq;j++) {
+    for (var j=0;j<16384;j++) {
 			this.xAxis.push(theta)
 			this.yAxis.push(Math.sin(2*theta*Math.PI*this.freq1) + Math.sin(2*theta*Math.PI*this.freq2))
-			theta = theta + base/this.hfreq
+			theta = theta + base/(this.hfreq)
 		}
 		dd = [this.xAxis,this.yAxis]
 		trace1.x = this.xAxis
 		trace1.y = this.yAxis
 		var data = [trace1]
 		Plotly.newPlot('sineplot',{data: data,layout:layout})
-
+		$("#label3").show()
+		$("#fft").show()
 	},
+}
+var ffto = {
+  amplitudes:  [],
+  init: function() {
+    this.amplitudes = []
+  },
+  generateFFT: function() {
+    var win = window.open("plot.html","_blank")
+    win.focus()
+    var trace2 = {
+         x: [],
+         y: [],
+         line: {
+          color: 'rgba (31, 119, 180, 1)', 
+          dash: 'solid', 
+          width: 1.5
+         }, 
+        mode: 'lines', 
+        name: '--------', 
+        type: 'scatter', 
+        xaxis: 'x1', 
+        yaxis: 'y1',
+       };  // end of trace2
+       var layout = {
+      x: [],
+      y: [],    
+        title: "fft plot ",
+        xaxis: {
+        type: "scatter",
+        showgrid: true,
+        range: [0,30],
+        autorange: false,
+        },
+        yaxis: {
+        type: "scatter",
+        showgrid: true,
+        range: [-2,2],
+        autorange: false,
+        showline: true,
+        },
+      height: 598,
+      width: 1080,
+      autosize: true,
+      showlegend: true,
+     }
+  },
 }
 function initialize() {
 	console.log("initialize")
+	$("#label3").hide()
+	$("#fft").hide()
 	sineWave.init()
 }
