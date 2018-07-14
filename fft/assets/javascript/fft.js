@@ -97,12 +97,49 @@ var sineWave = {
 }
 var ffto = {
   amplitudes:  [],
+  yAxis:       [],
   init: function() {
     this.amplitudes = []
   },
+  fft2: function(X) {
+    var N = X.length;
+  if (N <= 1) {
+    return X;
+  }
+  var M = N/2;
+  var even = [];
+  var odd = [];
+  even.length = M;
+  odd.length = M;
+  for (var i = 0; i < M; ++i) {
+    even[i] = X[i*2];
+    odd[i] = X[i*2+1];
+  }
+  even = this.fft2(even);
+  odd = this.fft2(odd);
+  var a = -2*math.pi;
+  for (var k = 0; k < M; ++k) {
+    // t = exp(-2PI*i*k/N) * X_{k+N/2} (in two steps)
+    var t = math.exp(math.complex(0, a*k/N));
+    t = math.multiply(t, odd[k]);
+    X[k] = odd[k] = math.add(even[k], t);
+    X[k+M] = even[k] = math.subtract(even[k], t);
+  }
+  return X;
+  },
   generateFFT: function() {
-    var win = window.open("plot.html","_blank")
-    win.focus()
+   // var win = window.open("plot.html","_blank")
+   // win.focus()
+    var XX = sineWave.getAxis();
+    this.amplitudes = XX[1]
+    var Y = this.fft2(this.amplitudes);
+    var realY = []
+    var realX = []
+    for (var jj=0;jj<Y.length;jj++){
+      realY.push(Y[jj].re)
+      realX.push(jj)
+    }
+    $("#sineplot").hide()
     var trace2 = {
          x: [],
          y: [],
@@ -117,20 +154,20 @@ var ffto = {
         xaxis: 'x1', 
         yaxis: 'y1',
        };  // end of trace2
-       var layout = {
+   var layout = {
       x: [],
       y: [],    
         title: "fft plot ",
         xaxis: {
         type: "scatter",
         showgrid: true,
-        range: [0,30],
+        range: [0,20000],
         autorange: false,
         },
         yaxis: {
         type: "scatter",
         showgrid: true,
-        range: [-2,2],
+        range: [-100,100],
         autorange: false,
         showline: true,
         },
@@ -138,7 +175,12 @@ var ffto = {
       width: 1080,
       autosize: true,
       showlegend: true,
-     }
+     } // end of layout
+    console.log(data)
+    trace2.x=realX
+    trace2.y=realY
+    var data = [trace2]
+    Plotly.newPlot('fftdisplay',{data: data,layout:layout})
   },
 }
 function initialize() {
@@ -146,4 +188,5 @@ function initialize() {
 	$("#label4").hide()
 	$("#fft").hide()
 	sineWave.init()
+  ffto.init()
 }
