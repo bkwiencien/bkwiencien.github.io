@@ -100,6 +100,7 @@ var ffto = {
   yAxis:       [],
   init: function() {
     this.amplitudes = []
+    this.yAxis = []
   },
   fft2: function(X) {
     var N = X.length;
@@ -128,14 +129,14 @@ var ffto = {
   return X;
   },
   generateFFT: function() {
-   // var win = window.open("plot.html","_blank")
-   // win.focus()
+    //var win = window.open("plot.html","_self")
+    //win.focus()
     var XX = sineWave.getAxis();
     this.amplitudes = XX[1]
     var Y = this.fft2(this.amplitudes);
     var realY = []
     var realX = []
-    for (var jj=0;jj<Y.length;jj++){
+    for (var jj=0;jj<(Y.length)/2;jj++){
       realY.push(Y[jj].re)
       realX.push(jj)
     }
@@ -176,7 +177,6 @@ var ffto = {
       autosize: true,
       showlegend: true,
      } // end of layout
-    console.log(data)
     trace2.x=realX
     trace2.y=realY
     var data = [trace2]
