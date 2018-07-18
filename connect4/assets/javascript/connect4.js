@@ -17,7 +17,16 @@ var board = {
 	carray:  [],
 	boardarray: [],
 	createDisplay: function () {
-
+		let parent = $("board-display")
+		for (let i=5;i>-1;i--){
+	      $("#board-display").after("<div class='row' id='row" + i+ "''>")
+	      for (let j=6;j>-1;j--){
+	      	let idd="cell"+i+j
+	      	console.log(idd)
+			$("#board-display").after("<div class='cell' id='cell"+i+j+"'> </div>");
+		  }
+		  $("#board-display").after("</div>")
+       }
 	},
 	init: function() {
 		console.log('in board init');

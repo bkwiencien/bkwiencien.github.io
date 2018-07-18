@@ -10,4 +10,8 @@ h2 {
 }
 .cell {
 	background-color: orange;
+	height: 15px;
+	width:  15px;
+	padding: 1px;
+	margin:  2px;
 }
