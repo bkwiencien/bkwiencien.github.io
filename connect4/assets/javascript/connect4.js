@@ -16,18 +16,23 @@ var board = {
 	rarray:  [],
 	carray:  [],
 	boardarray: [],
+	$row:      "",
 	createDisplay: function () {
-		let parent = $("board-display")
-		for (let i=5;i>-1;i--){
-	      $("#board-display").after("<div class='row' id='row" + i+ "''>")
-	      for (let j=6;j>-1;j--){
-	      	let idd="cell"+i+j
-	      	console.log(idd)
-			$("#board-display").after("<div class='cell' id='cell"+i+j+"'> </div>");
-		  }
-		  $("#board-display").after("</div>")
+		const $board = $("#board-display")
+		for (let i=0;i<this.ROWS;i++){
+			this.$row = $("<div>")
+			.addClass("row")
+			.attr('id','row'+i);
+			console.log("add a row i = " +i)
+	      for (let j=0;j<this.COLS;j++) {
+	       const $col = $("<div>")
+	       .addClass("col")
+	       .attr('id','col'+i+j);
+	       this.$row.append($col);
+	      }
+	      $board.append(this.$row);
        }
-	},
+   },
 	init: function() {
 		console.log('in board init');
 		this.rarray = [];

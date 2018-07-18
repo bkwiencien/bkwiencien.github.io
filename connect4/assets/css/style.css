@@ -1,5 +1,6 @@
 body {
 	backgroud-color: #2253AF;
+	text-align: center;
 	color: white;
 }
 .jumbotron {
@@ -8,10 +9,24 @@ body {
 h2 {
 	color: white;
 }
+.col {
+	background-color: white;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 5px;
+}
 .cell {
 	background-color: orange;
-	height: 15px;
-	width:  15px;
-	padding: 1px;
-	margin:  2px;
+	height: 40px;
+	width:  40px;
+	padding: 5px;
+	margin:  5px;
+	display: inline-block;
+}
+#board-display {
+	background-color: orange;
+	display: inline-block;
+	padding: 20px;
 }
