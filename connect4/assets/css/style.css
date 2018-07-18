@@ -5,3 +5,9 @@ body {
 .jumbotron {
 	background-color: #2253AF;
 }
+h2 {
+	color: white;
+}
+.cell {
+	background-color: orange;
+}
