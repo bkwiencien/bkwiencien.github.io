@@ -23,7 +23,6 @@ var board = {
 			this.$row = $("<div>")
 			.addClass("row")
 			.attr('id','row'+i);
-			console.log("add a row i = " +i)
 	      for (let j=0;j<this.COLS;j++) {
 	       const $col = $("<div>")
 	       .addClass("col")
@@ -34,7 +33,6 @@ var board = {
        }
    },
 	init: function() {
-		console.log('in board init');
 		this.rarray = [];
 		this.carray = [];
 		for (let j=0;j<this.ROWS;j++) {
@@ -43,9 +41,29 @@ var board = {
 		      this.boardarray.push(cello);
 		   }
 		}
-		console.log(this.boardarray)
 		this.createDisplay();
+		console.log('leaving init')
 	},
+}
+var players = {
+	init: function() {
+		this.player1.positions = [];
+		this.player2.positions = [];
+	},
+	player1:  {
+		color: 'red',
+		positions: [],
+	},
+	player2:  {
+		color: 'green',
+		positions: [],
+	},
+};
+function starto() {
+	console.log('in starto');
+	board.init()
+	players.init()
+	console.log('in starto after initzzzzzzzzzzzzzz')
 }
 function initialize() {
 	console.log("initialize")

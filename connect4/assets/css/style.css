@@ -9,6 +9,15 @@ body {
 h2 {
 	color: white;
 }
+#startbtn {
+	color: black;
+	background-color: red;
+	text-align: center;
+	float: left;
+}
+#row1 {
+	background: color #2253F;
+}
 .col {
 	background-color: white;
 	width: 70px;
