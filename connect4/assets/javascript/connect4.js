@@ -1,3 +1,4 @@
+
 var board = {
 	cell: {
 		row:   -1,
@@ -17,6 +18,7 @@ var board = {
 	carray:  [],
 	boardarray: [],
 	$row:      "",
+	gamePlayed: false,
 	createDisplay: function () {
 		const $board = $("#board-display")
 		for (let i=0;i<this.ROWS;i++){
@@ -45,19 +47,34 @@ var board = {
 	},
 }
 var players = {
+	currentPlayer: "",
 	init: function() {
 		this.player1.positions = [];
 		this.player2.positions = [];
 	},
+	setCurrentPlayer: function(pcode){
+		if ((pcode != 'green')& (pcode != 'red')) {
+			alert('invalid player')
+			return;
+		}
+		this.currentPlayer=pcode;
+		if (this.currentPlayer == 'red') {
+			$("#redcircle").show();
+			$('#greencircle').hide();
+		} else {
+			$("#greencircle").show();
+			$("#redcircle").hide();
+		}
+	},
 	starto: function() {
 		console.log('in starto');
-	   // board.init()
-     //	players.init()
-	  //  $("body").css("cursor", "progress");
-	  //  this.setListeners()
-	  $("#status").text("red's move")
-	    console.log('in starto after initzzzzzzzzzzzzzz')
-	    //debugger;
+		if (players.gamePlayed) {
+	      board.init()
+	    }  
+       players.init()
+	   $("body").css("cursor", "progress");
+	   $("#status").text("red's move")
+	    players.setCurrentPlayer('red');
 	},
 	setListeners: function() {
        let g = 0;
@@ -75,5 +92,5 @@ var players = {
 function initialize() {
 	console.log("initialize")
 	board.init()
-	$("#startbtn").on("click",players.starto());
+	//$("#startbtn").on("click",players.starto());
 }
