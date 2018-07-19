@@ -18,6 +18,9 @@ h2 {
 #row1 {
 	background: color #2253F;
 }
+#status {
+	color: white;
+}
 .col {
 	background-color: white;
 	width: 70px;

@@ -9,7 +9,7 @@ var board = {
 	Cell: function(ir,ic) {
 		this.row = ir;
 		this.col = ic;
-		this.name = "cell-"+ir+"-"+ic
+		this.name = "coll-"+ir+"-"+ic
 	},
     ROWS:  6,
 	COLS:  7,
@@ -42,13 +42,24 @@ var board = {
 		   }
 		}
 		this.createDisplay();
-		console.log('leaving init')
 	},
 }
 var players = {
 	init: function() {
 		this.player1.positions = [];
 		this.player2.positions = [];
+	},
+	starto: function() {
+		console.log('in starto');
+	    board.init()
+     	players.init()
+	    $("body").css("cursor", "progress");
+	    this.setListeners()
+	    $("#status").text("red's move")
+	    console.log('in starto after initzzzzzzzzzzzzzz')
+	},
+	setListeners: function() {
+       let g = 0;
 	},
 	player1:  {
 		color: 'red',
@@ -59,13 +70,7 @@ var players = {
 		positions: [],
 	},
 };
-function starto() {
-	console.log('in starto');
-	board.init()
-	players.init()
-	console.log('in starto after initzzzzzzzzzzzzzz')
-}
 function initialize() {
-	console.log("initialize")
+	//console.log("initialize")
 	board.init()
 }
