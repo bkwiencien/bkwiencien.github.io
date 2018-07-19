@@ -51,15 +51,17 @@ var players = {
 	},
 	starto: function() {
 		console.log('in starto');
-	    board.init()
-     	players.init()
-	    $("body").css("cursor", "progress");
-	    this.setListeners()
-	    $("#status").text("red's move")
+	   // board.init()
+     //	players.init()
+	  //  $("body").css("cursor", "progress");
+	  //  this.setListeners()
+	  $("#status").text("red's move")
 	    console.log('in starto after initzzzzzzzzzzzzzz')
+	    //debugger;
 	},
 	setListeners: function() {
        let g = 0;
+       console.log('in setListeners')
 	},
 	player1:  {
 		color: 'red',
@@ -71,6 +73,7 @@ var players = {
 	},
 };
 function initialize() {
-	//console.log("initialize")
+	console.log("initialize")
 	board.init()
+	$("#startbtn").on("click",players.starto());
 }
