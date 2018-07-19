@@ -66,6 +66,19 @@ var players = {
 			$("#redcircle").hide();
 		}
 	},
+	switchPlayer: function() {
+		if (this.currentPlayer == 'red') {
+			this.currentPlayer = 'green';
+			$("#greencircle").show();
+			$("#redcircle").hide();
+			$("#status").text("green's move")
+		} else {
+			this.currentPlayer = 'red';
+			$("#greencircle").hide();
+			$("#redcircle").show();
+			$("#status").text("red's move")
+		}
+	},
 	starto: function() {
 		console.log('in starto');
 		if (players.gamePlayed) {
