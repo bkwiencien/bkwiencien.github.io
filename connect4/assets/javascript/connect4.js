@@ -45,6 +45,17 @@ var board = {
 		}
 		this.createDisplay();
 	},
+	addListeners: function() {
+      let array =['col00','col01','col02','col03','col04','col05','col06'];
+      for (let i=0;i<array.length;i++) {
+      	console.log("#"+array[i]);
+       // debugger;
+        $("#"+array[i]).bind('click',this.processClickOnCell);
+      }
+	},
+	processClickOnCell: function() {
+		console.log('in process click on cell ' + this.getAttribute('id'));
+	},
 }
 var players = {
 	currentPlayer: "",
@@ -85,13 +96,9 @@ var players = {
 	      board.init()
 	    }  
        players.init()
-	   $("body").css("cursor", "progress");
 	   $("#status").text("red's move")
 	    players.setCurrentPlayer('red');
-	},
-	setListeners: function() {
-       let g = 0;
-       console.log('in setListeners')
+	    board.addListeners()
 	},
 	player1:  {
 		color: 'red',
