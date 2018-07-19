@@ -21,6 +21,12 @@ h2 {
 #status {
 	color: white;
 }
+#a1 {
+	color: white;
+}
+#p1 {
+	color: white;
+}
 .col {
 	background-color: white;
 	width: 70px;
@@ -41,6 +47,9 @@ h2 {
 	background-color: orange;
 	display: inline-block;
 	padding: 20px;
+}
+#col00 {
+	background-color: white;
 }
 #col01 {
 	background-color: white;

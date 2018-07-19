@@ -33,8 +33,8 @@ var board = {
        }
    },
    dropToken: function(col) {
-		let i = 0;
-		console.log('in dropToken');
+		let player = players.currentPlayer;
+		console.log("currentPlayer = " + player + " col = "+ col)
 	},
    init: function() {
 	    this.boardArray  = new Array(6);
