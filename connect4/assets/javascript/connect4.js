@@ -14,8 +14,6 @@ var board = {
 	},
     ROWS:  6,
 	COLS:  7,
-	rarray:  [],
-	carray:  [],
 	boardarray: null,
 	$row:      "",
 	gamePlayed: false,
