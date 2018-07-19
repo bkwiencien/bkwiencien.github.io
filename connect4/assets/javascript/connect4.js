@@ -10,13 +10,13 @@ var board = {
 	Cell: function(ir,ic) {
 		this.row = ir;
 		this.col = ic;
-		this.name = "coll-"+ir+"-"+ic
+		this.name = "coll"+ir+ic
 	},
     ROWS:  6,
 	COLS:  7,
 	rarray:  [],
 	carray:  [],
-	boardarray: [],
+	boardarray: null,
 	$row:      "",
 	gamePlayed: false,
 	createDisplay: function () {
@@ -34,29 +34,36 @@ var board = {
 	      $board.append(this.$row);
        }
    },
-	init: function() {
-		this.rarray = [];
-		this.carray = [];
-		for (let j=0;j<this.ROWS;j++) {
-			for (let k=0;k<this.COLS;k++) {
-			  var cello = new this.Cell(j,k);
-		      this.boardarray.push(cello);
-		   }
-		}
+   dropToken: function(col) {
+		let i = 0;
+		console.log('in dropToken');
+	},
+   init: function() {
+	    this.boardArray  = new Array(6);
+	    for (var i=0;i<6;i++) {
+	    	this.boardArray[i] = new Array(7);
+	    }
+	    for (var ii=0;ii<6;ii++) {
+	    	for (var jj=0;jj<7;jj++) {
+	    		var temp = this.Cell(ii,jj);
+	    		this.boardArray[ii][jj] = temp
+	    	}
+	    }
 		this.createDisplay();
 	},
 	addListeners: function() {
       let array =['col00','col01','col02','col03','col04','col05','col06'];
       for (let i=0;i<array.length;i++) {
       	console.log("#"+array[i]);
-       // debugger;
         $("#"+array[i]).bind('click',this.processClickOnCell);
       }
 	},
 	processClickOnCell: function() {
-		console.log('in process click on cell ' + this.getAttribute('id'));
+		let col = this.getAttribute('id');
+		console.log('in process click on cell ' + col);
+		board.dropToken(col);
 	},
-}
+};
 var players = {
 	currentPlayer: "",
 	init: function() {
@@ -67,7 +74,7 @@ var players = {
 		if ((pcode != 'green')& (pcode != 'red')) {
 			alert('invalid player')
 			return;
-		}
+		}	
 		this.currentPlayer=pcode;
 		if (this.currentPlayer == 'red') {
 			$("#redcircle").show();
@@ -76,6 +83,9 @@ var players = {
 			$("#greencircle").show();
 			$("#redcircle").hide();
 		}
+	},
+	getCurrentPlayer() {
+		return(this.currentPlayer);
 	},
 	switchPlayer: function() {
 		if (this.currentPlayer == 'red') {
@@ -110,7 +120,6 @@ var players = {
 	},
 };
 function initialize() {
-	console.log("initialize")
-	board.init()
-	//$("#startbtn").on("click",players.starto());
+	console.log("initialize");
+	board.init();
 }
