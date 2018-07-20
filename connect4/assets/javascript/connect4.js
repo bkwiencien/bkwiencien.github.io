@@ -77,13 +77,18 @@ var board = {
       }
 	},
 	processClickOnCell: function() {
+		let valid = true;
 		let col = this.getAttribute('id');
-		console.log('in process click on cell ' + col);
-		board.dropToken(col);
-		players.switchPlayer()
-	},
-	aWinner: function() {
-
+		let ccol = this.getAttribute('style')
+		if (ccol == null) {
+		  board.dropToken(col);
+		  players.switchPlayer()
+	    } else {
+	      $("#status").text("that column is full choose another")
+	    }
+  },		
+  aWinner: function() {
+      let j = 0;
 	},
 };
 var players = {
