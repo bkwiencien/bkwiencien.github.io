@@ -51,13 +51,10 @@ var board = {
 			   	done = true;
 			   	this.boardarray[row][ccol].color='red'
 			   	this.boardarray[row][ccol].open=false
-			   	$("#"+t.name).css('background-color','red')
+			   	$("#"+t.name).css('background-color',player)
 			   }	
 		    }
-			console.log('here row = ' + row)
-			console.log(t)
 			row = row -1
-			console.log('row is now = ' + row)
 		}
 	},
    init: function() {
@@ -85,6 +82,7 @@ var board = {
 		let col = this.getAttribute('id');
 		console.log('in process click on cell ' + col);
 		board.dropToken(col);
+		players.switchPlayer()
 	},
 };
 var players = {
