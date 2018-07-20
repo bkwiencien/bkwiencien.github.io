@@ -41,7 +41,6 @@ var board = {
    	    let done = false
    	    let name = ""
 		let player = players.currentPlayer;
-		console.log("currentPlayer = " + player + " col = "+ col)
 		let temp = col.slice(4)
 		ccol = parseInt(temp);
 		for (let j=6;j>-1;j--){
@@ -49,13 +48,14 @@ var board = {
 			   t = this.boardarray[row][ccol]
 			   if ((t.color == 'white') & (done == false)){
 			   	done = true;
-			   	this.boardarray[row][ccol].color='red'
+			   	this.boardarray[row][ccol].color=player
 			   	this.boardarray[row][ccol].open=false
 			   	$("#"+t.name).css('background-color',player)
 			   }	
 		    }
 			row = row -1
 		}
+		this.aWinner()
 	},
    init: function() {
 	    this.boardarray  = new Array(6);
@@ -77,13 +77,19 @@ var board = {
       }
 	},
 	processClickOnCell: function() {
+		let valid = true;
 		let col = this.getAttribute('id');
-		console.log('in process click on cell ' + col);
-		board.dropToken(col);
-		players.switchPlayer()
-	},
-	aWinner: function() {
-
+		let ccol = this.getAttribute('style')
+		if (ccol == null) {
+		  board.dropToken(col);
+		  players.switchPlayer()
+	    } else {
+	      $("#status").text("that column is full choose another")
+	    }
+  },		
+  aWinner: function() {
+      let j = 0;
+      console.log('in aWinner')
 	},
 };
 var players = {
@@ -123,7 +129,6 @@ var players = {
 		}
 	},
 	starto: function() {
-		console.log('in starto');
 		if (players.gamePlayed) {
 	      board.init()
 	    }  
