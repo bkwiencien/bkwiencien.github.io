@@ -55,6 +55,7 @@ var board = {
 		    }
 			row = row -1
 		}
+		this.aWinner()
 	},
    init: function() {
 	    this.boardarray  = new Array(6);
@@ -88,6 +89,7 @@ var board = {
   },		
   aWinner: function() {
       let j = 0;
+      console.log('in aWinner')
 	},
 };
 var players = {
