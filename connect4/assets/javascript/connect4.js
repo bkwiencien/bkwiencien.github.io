@@ -10,6 +10,8 @@ var board = {
 	Cell: function(ir,ic) {
 		this.row = ir;
 		this.col = ic;
+		this.color="white"
+		this.open=true
 		this.name = "coll"+ir+ic
 	},
     ROWS:  6,
@@ -43,16 +45,16 @@ var board = {
 	    }
 	    for (var ii=0;ii<6;ii++) {
 	    	for (var jj=0;jj<7;jj++) {
-	    		var temp = this.Cell(ii,jj);
+	    		var temp = new board.Cell(ii,jj);
 	    		this.boardArray[ii][jj] = temp
 	    	}
 	    }
+	    console.log(this.boardArray);
 		this.createDisplay();
 	},
 	addListeners: function() {
       let array =['col00','col01','col02','col03','col04','col05','col06'];
       for (let i=0;i<array.length;i++) {
-      	console.log("#"+array[i]);
         $("#"+array[i]).bind('click',this.processClickOnCell);
       }
 	},
