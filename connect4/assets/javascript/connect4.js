@@ -41,7 +41,6 @@ var board = {
    	    let done = false
    	    let name = ""
 		let player = players.currentPlayer;
-		console.log("currentPlayer = " + player + " col = "+ col)
 		let temp = col.slice(4)
 		ccol = parseInt(temp);
 		for (let j=6;j>-1;j--){
@@ -49,7 +48,7 @@ var board = {
 			   t = this.boardarray[row][ccol]
 			   if ((t.color == 'white') & (done == false)){
 			   	done = true;
-			   	this.boardarray[row][ccol].color='red'
+			   	this.boardarray[row][ccol].color=player
 			   	this.boardarray[row][ccol].open=false
 			   	$("#"+t.name).css('background-color',player)
 			   }	
@@ -128,7 +127,6 @@ var players = {
 		}
 	},
 	starto: function() {
-		console.log('in starto');
 		if (players.gamePlayed) {
 	      board.init()
 	    }  
