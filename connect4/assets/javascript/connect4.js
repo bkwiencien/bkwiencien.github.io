@@ -66,10 +66,8 @@ var board = {
 	    	for (var jj=0;jj<7;jj++) {
 	    		var temp = new board.Cell(ii,jj);
 	    		this.boardarray[ii][jj] = temp
-	    		//console.log(this.boardarray[1][1])
 	    	}
 	    }
-	   // console.log(this.boardarray[0][0]);
 		this.createDisplay();
 	},
 	addListeners: function() {
@@ -83,6 +81,9 @@ var board = {
 		console.log('in process click on cell ' + col);
 		board.dropToken(col);
 		players.switchPlayer()
+	},
+	aWinner: function() {
+
 	},
 };
 var players = {
