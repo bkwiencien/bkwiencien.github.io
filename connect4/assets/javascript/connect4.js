@@ -89,7 +89,25 @@ var board = {
   },		
   aWinner: function() {
       let j = 0;
-      console.log('in aWinner')
+      let rinarow = 0;
+      let ginarow = 0;
+      let current = "";
+      let prev    = "";
+      let firsttime = true;
+      for (let j=0;j<6;j++) {
+      	for (let k=0;k<7;k++) {
+      		//console.log(this.boardarray[j][k]);
+      		let t = this.boardarray[j][k]
+      		if (t.coler=='red') {
+      			rinrow++
+      		} else {
+      			if (t.color=='green') {
+      				ginarow++;
+      			}
+      		}
+      	}
+      }
+      console.log('rinarow '+rinarow+' greeninarow '+ginarow);
 	},
 };
 var players = {
