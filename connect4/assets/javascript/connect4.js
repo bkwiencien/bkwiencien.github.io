@@ -12,7 +12,7 @@ var board = {
 		this.col = ic;
 		this.color="white"
 		this.open=true
-		this.name = "coll"+ir+ic
+		this.name = "col"+ir+ic
 	},
     ROWS:  6,
 	COLS:  7,
@@ -35,21 +35,44 @@ var board = {
        }
    },
    dropToken: function(col) {
+   	    let row = 5
+   	    let ccol = 0
+   	    let t = null;
+   	    let done = false
+   	    let name = ""
 		let player = players.currentPlayer;
 		console.log("currentPlayer = " + player + " col = "+ col)
+		let temp = col.slice(4)
+		ccol = parseInt(temp);
+		for (let j=6;j>-1;j--){
+			if (row > -1){
+			   t = this.boardarray[row][ccol]
+			   if ((t.color == 'white') & (done == false)){
+			   	done = true;
+			   	this.boardarray[row][ccol].color='red'
+			   	this.boardarray[row][ccol].open=false
+			   	$("#"+t.name).css('background-color','red')
+			   }	
+		    }
+			console.log('here row = ' + row)
+			console.log(t)
+			row = row -1
+			console.log('row is now = ' + row)
+		}
 	},
    init: function() {
-	    this.boardArray  = new Array(6);
+	    this.boardarray  = new Array(6);
 	    for (var i=0;i<6;i++) {
-	    	this.boardArray[i] = new Array(7);
+	    	this.boardarray[i] = new Array(7);
 	    }
 	    for (var ii=0;ii<6;ii++) {
 	    	for (var jj=0;jj<7;jj++) {
 	    		var temp = new board.Cell(ii,jj);
-	    		this.boardArray[ii][jj] = temp
+	    		this.boardarray[ii][jj] = temp
+	    		//console.log(this.boardarray[1][1])
 	    	}
 	    }
-	    console.log(this.boardArray);
+	   // console.log(this.boardarray[0][0]);
 		this.createDisplay();
 	},
 	addListeners: function() {
