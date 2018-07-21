@@ -40,6 +40,7 @@ var board = {
    	    let t = null;
    	    let done = false
    	    let name = ""
+   	    let resulto = ""
 		let player = players.currentPlayer;
 		let temp = col.slice(4)
 		ccol = parseInt(temp);
@@ -55,7 +56,10 @@ var board = {
 		    }
 			row = row -1
 		}
-		this.aWinner()
+		resulto = this.aWinner()
+		if (resulto != "none") {
+			$("#status").html("<strong>" + resulto+ " wins game over</strong>")
+		}
 	},
    init: function() {
 	    this.boardarray  = new Array(6);
@@ -89,25 +93,48 @@ var board = {
   },		
   aWinner: function() {
       let j = 0;
+      let winner = "none";
       let rinarow = 0;
       let ginarow = 0;
       let current = "";
       let prev    = "";
       let firsttime = true;
+      let teststr = "";
+      // check by row
       for (let j=0;j<6;j++) {
+      	firsttime = true
       	for (let k=0;k<7;k++) {
-      		//console.log(this.boardarray[j][k]);
       		let t = this.boardarray[j][k]
-      		if (t.coler=='red') {
-      			rinrow++
+      		teststr = t.color
+      		teststr = teststr.trim();
+      		if (firsttime) {
+      			prev = teststr;
+      			current = teststr;
+      			firsttime = false;
+      			rinarow = 0
+      			ginarow = 0
       		} else {
-      			if (t.color=='green') {
-      				ginarow++;
-      			}
+      			prev = current
+      			current = teststr
       		}
-      	}
+      		  if (current=="red") {
+      		  	 if (prev == "red") 
+      		     rinarow++
+      		     if (rinarow ==4) {
+      		     	return("red")
+      		     }
+      		  }
+      		  if (current=='green'){
+      			 ginarow++
+      			 if (ginarow ==4) {
+      		     	return("green")
+      		     }
+      		  } 
+         }
+         console.log('for row ' + j + " rinarow " +rinarow+' greeninarow '+ginarow);
       }
-      console.log('rinarow '+rinarow+' greeninarow '+ginarow);
+      // now check by column
+      return(winner)
 	},
 };
 var players = {
