@@ -59,8 +59,23 @@ var board = {
 		resulto = this.aWinner()
 		if (resulto != "none") {
 			$("#status").html("<strong>" + resulto+ " wins game over</strong>")
+			setTimeout((function() {  
+              return board.gameOver(resulto);
+              }), 1000);
 		}
 	},
+   gameOver: function(w) {
+   	 $("#status").html("<h2><strong>" + w + " wins game over</strong><h2>");
+   	 $("#startbtn").attr("disabled","disabled")
+   	 $("#startbtn").hide();
+   	 if (w == 'red'){
+   	 	$("#greencircle").hide();
+   	 	$("#status").css('color','red');
+   	 } else {
+   	 	$("#redcircle").hide();
+   	 	$("#status").css('color','green');
+   	 }
+   },
    init: function() {
 	    this.boardarray  = new Array(6);
 	    for (var i=0;i<6;i++) {
@@ -96,12 +111,18 @@ var board = {
       let winner = "none";
       let rinarow = 0;
       let ginarow = 0;
+      let rlongest = 0;
+      let glongest = 0;
       let current = "";
       let prev    = "";
       let firsttime = true;
       let teststr = "";
+      let dd = new Date();
       // check by row
       for (let j=0;j<6;j++) {
+      	console.log("j ============================ " +j)
+      	rlongest = 0;
+      	glongest = 0;
       	firsttime = true
       	for (let k=0;k<7;k++) {
       		let t = this.boardarray[j][k]
@@ -117,21 +138,50 @@ var board = {
       			prev = current
       			current = teststr
       		}
-      		  if (current=="red") {
-      		  	 if (prev == "red") 
-      		     rinarow++
-      		     if (rinarow ==4) {
-      		     	return("red")
-      		     }
+      		  if (j==5) {
+      		  	let kkk= 0
+      		  	console.log('got this far ' + dd.getTime())
       		  }
-      		  if (current=='green'){
-      			 ginarow++
-      			 if (ginarow ==4) {
-      		     	return("green")
-      		     }
-      		  } 
-         }
-         console.log('for row ' + j + " rinarow " +rinarow+' greeninarow '+ginarow);
+      		  if (current=="red") {
+      		  	 if (prev == "red") {
+      		       rinarow++
+      		     } else {
+      		     	rinarow = 1;
+      		     }  
+      		  }
+      		  if (rinarow > rlongest) {
+      		  	rlongest = rinarow;
+      		  }
+      		  if ((current != 'red') & (prev =='red')) {
+      		  	if (rinarow > rlongest) { 
+      		  	  rlongest = rinarow;
+      		  	}  
+      		  	rinarow  = 0;
+      		  }
+      		  console.log('here 1111111')
+      		  if (current=="green") {
+      		  	 if (prev == "green") {
+      		       ginarow++
+      		     } else {
+      		     	ginarow = 1;
+      		     }  
+      		  }
+      		  if ((current != 'green') & (prev =='green')) {
+      		  	if (ginarow > glongest){
+      		  	  glongest = ginarow;
+      		  	}  
+      		  	ginarow  = 0;
+      		  }
+      		  console.log("check if i am done rlongest = " + rlongest)
+      		  if (rlongest >= 4) {
+      		  	$("#status").text("game over red wins");
+      		  	return('red');
+      		  }	
+              if (glongest == 4) {	
+                return('green');
+              }  
+     }
+         console.log('for row ' + j + " rlongest " +rlongest+' glongest '+glongest);
       }
       // now check by column
       return(winner)
