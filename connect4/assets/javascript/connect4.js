@@ -130,6 +130,8 @@ var board = {
       let ginarow = 0;
       let rincolumn = 0;
       let gincolumn = 0;
+      let rinadiagonal = 0;
+      let ginadiagonal = 0;
       let rlongest = 0;
       let glongest = 0;
       let current = "";
@@ -179,6 +181,9 @@ var board = {
       		     	ginarow = 1;
       		     }  
       		  }
+            if (ginarow > glongest){
+              glongest = ginarow;
+            }
       		  if ((current != 'green') & (prev =='green')) {
       		  	if (ginarow > glongest){
       		  	  glongest = ginarow;
@@ -258,15 +263,26 @@ var board = {
          console.log('for column ' + j + " rlongest " +rlongest+' glongest '+glongest);
         }
       }
+      let diagonals=[];
+      let emptydiagonals=[];
+      rlongest = 0
+      for (let j=0;j<6;j++) {
+        diagonals.push(this.boardarray[j][j])
+      }  
+      console.log("checking diagonals");
+      for (k=0;k<diagonals.length;k++) {
+        let tcolor = diagonals[k].color;
+        console.log('tcolor is ' + tcolor)
+      }
       return(winner)
       // now check diagonals!!!
-	},
+	},  // end of aWinner
 };
 var players = {
 	currentPlayer: "",
 	init: function() {
-		this.player1.positions = [];
-		this.player2.positions = [];
+		this.redPlayer.positions = [];
+		this.greenPlayer.positions = [];
 	},
 	setCurrentPlayer: function(pcode){
 		if ((pcode != 'green')& (pcode != 'red')) {
@@ -307,11 +323,11 @@ var players = {
 	    players.setCurrentPlayer('red');
 	    board.addListeners()
 	},
-	player1:  {
+	redPlayer:  {
 		color: 'red',
 		positions: [],
 	},
-	player2:  {
+	greenPlayer:  {
 		color: 'green',
 		positions: [],
 	},
