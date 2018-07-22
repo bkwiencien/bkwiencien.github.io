@@ -243,6 +243,7 @@ var board = {
         }
       }
       return(winner)
+      // now check diagonals!!!
 	},
 };
 var players = {
