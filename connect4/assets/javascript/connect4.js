@@ -108,9 +108,12 @@ var board = {
   },		
   aWinner: function() {
       let j = 0;
+      let k = 0;
       let winner = "none";
       let rinarow = 0;
       let ginarow = 0;
+      let rincolumn = 0;
+      let gincolumn = 0;
       let rlongest = 0;
       let glongest = 0;
       let current = "";
@@ -120,7 +123,6 @@ var board = {
       let dd = new Date();
       // check by row
       for (let j=0;j<6;j++) {
-      	console.log("j ============================ " +j)
       	rlongest = 0;
       	glongest = 0;
       	firsttime = true
@@ -138,11 +140,7 @@ var board = {
       			prev = current
       			current = teststr
       		}
-      		  if (j==5) {
-      		  	let kkk= 0
-      		  	console.log('got this far ' + dd.getTime())
-      		  }
-      		  if (current=="red") {
+      	    if (current=="red") {
       		  	 if (prev == "red") {
       		       rinarow++
       		     } else {
@@ -158,7 +156,6 @@ var board = {
       		  	}  
       		  	rinarow  = 0;
       		  }
-      		  console.log('here 1111111')
       		  if (current=="green") {
       		  	 if (prev == "green") {
       		       ginarow++
@@ -172,7 +169,6 @@ var board = {
       		  	}  
       		  	ginarow  = 0;
       		  }
-      		  console.log("check if i am done rlongest = " + rlongest)
       		  if (rlongest >= 4) {
       		  	$("#status").text("game over red wins");
       		  	return('red');
@@ -181,9 +177,70 @@ var board = {
                 return('green');
               }  
      }
-         console.log('for row ' + j + " rlongest " +rlongest+' glongest '+glongest);
+        // console.log('for row ' + j + " rlongest " +rlongest+' glongest '+glongest);
       }
       // now check by column
+      for (let j=0;j<7;j++) {
+      	console.log("column  ============================ " + j)
+      	rlongest = 0;
+      	glongest = 0;
+      	firsttime = true
+      	for (let k=0;k<5;k++) {
+      		let t = this.boardarray[k][j]
+      		teststr = t.color
+      		if (teststr == 'red') {
+      			console.log('found one')
+      		}
+      		teststr = teststr.trim();
+      		if (firsttime) {
+      			prev = teststr;
+      			current = teststr;
+      			firsttime = false;
+      			rincolumn = 0
+      			gincolumn = 0
+      		} else {
+      			prev = current
+      			current = teststr
+      		}
+            if (current=="red") {
+      		  	 if (prev == "red") {
+      		       rincolumn++
+      		     } else {
+      		     	rincolumn = 1;
+      		     }  
+      		  }
+      		  if (rincolumn > rlongest) {
+      		  	rlongest = rincolumn;
+      		  }
+      		  if ((current != 'red') & (prev =='red')) {
+      		  	if (rincolumn > rlongest) { 
+      		  	  rlongest = rincolumn;
+      		  	}  
+      		  	rincolumn  = 0;
+      		  }
+      		  if (current=="green") {
+      		  	 if (prev == "green") {
+      		       gincolumn++
+      		     } else {
+      		     	gincolumn= 1;
+      		     }  
+      		  }
+      		  if ((current != 'green') & (prev =='green')) {
+      		  	if (gincolumn > glongest){
+      		  	  glongest = gincolumn;
+      		  	}  
+      		  	gincolumn  = 0;
+      		  }
+      		  if (rlongest >= 4) {
+      		  	$("#status").text("game over red wins");
+      		  	return('red');
+      		  }	
+              if (glongest == 4) {	
+                return('green');
+              }  
+     }
+         console.log('for column ' + j + " rlongest " +rlongest+' glongest '+glongest);
+      }
       return(winner)
 	},
 };
