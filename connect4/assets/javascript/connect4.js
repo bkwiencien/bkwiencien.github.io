@@ -245,6 +245,9 @@ var board = {
       		     	gincolumn= 1;
       		     }  
       		  }
+            if (gincolumn > glongest) {
+              glongest = gincolumn;
+            }  
       		  if ((current != 'green') & (prev =='green')) {
       		  	if (gincolumn > glongest){
       		  	  glongest = gincolumn;
