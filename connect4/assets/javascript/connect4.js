@@ -14,11 +14,12 @@ var board = {
 		this.open=true
 		this.name = "col"+ir+ic
 	},
-    ROWS:  6,
+  ROWS:  6,
 	COLS:  7,
 	boardarray: null,
 	$row:      "",
 	gamePlayed: false,
+  numbPlaced: 0,
 	createDisplay: function () {
 		const $board = $("#board-display")
 		for (let i=0;i<this.ROWS;i++){
@@ -56,7 +57,16 @@ var board = {
 		    }
 			row = row -1
 		}
+    board.numbPlaced++;
+    console.log("numbPlaced = "+board.numbPlaced);
 		resulto = this.aWinner()
+    if ((resulto == "none") & (board.numbPlaced >= 42)) {
+      $("#status").html("<strong> Game ends in  tie</strong>")
+      resulto = "tie";
+      setTimeout((function() {  
+              return board.gameOver(resulto);
+              }), 1000);
+    }
 		if (resulto != "none") {
 			$("#status").html("<strong>" + resulto+ " wins game over</strong>")
 			setTimeout((function() {  
@@ -65,7 +75,13 @@ var board = {
 		}
 	},
    gameOver: function(w) {
-   	 $("#status").html("<h2><strong>" + w + " wins game over</strong><h2>");
+     let rr = w.trim();
+     if (rr != 'tie') {
+   	   $("#status").html("<h2><strong>" + rr + " wins game over</strong><h2>");
+     }
+     if (rr == 'tie') {
+       $("#status").html("<h2><strong> Game ends in a tie </strong><h2>");
+     }  
    	 $("#startbtn").attr("disabled","disabled")
    	 $("#startbtn").hide();
    	 if (w == 'red'){
