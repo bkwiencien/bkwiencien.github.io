@@ -181,15 +181,14 @@ var board = {
       }
       // now check by column
       for (let j=0;j<7;j++) {
-      	console.log("column  ============================ " + j)
       	rlongest = 0;
       	glongest = 0;
       	firsttime = true
-      	for (let k=0;k<5;k++) {
+      	for (let k=0;k<6;k++) {
       		let t = this.boardarray[k][j]
       		teststr = t.color
-      		if (teststr == 'red') {
-      			console.log('found one')
+      		if ((k == 0) & (teststr == 'red') & (j==5)) {
+      			console.log('column 0 color is ' + teststr)
       		}
       		teststr = teststr.trim();
       		if (firsttime) {
@@ -235,11 +234,13 @@ var board = {
       		  	$("#status").text("game over red wins");
       		  	return('red');
       		  }	
-              if (glongest == 4) {	
+              if (glongest >= 4) {	
                 return('green');
               }  
      }
+        if (j == 0) {
          console.log('for column ' + j + " rlongest " +rlongest+' glongest '+glongest);
+        }
       }
       return(winner)
 	},
