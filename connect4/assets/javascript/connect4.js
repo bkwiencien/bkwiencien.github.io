@@ -278,6 +278,25 @@ var board = {
       diagonals.push(this.boardarray[4][5]);
       diagonals.push(this.boardarray[5][6]);
       this.findDiagonalWinner(diagonals);
+      diagonals = emptydiagonals;
+      diagonals.push(this.boardarray[4][6]);
+      diagonals.push(this.boardarray[3][5]);
+      diagonals.push(this.boardarray[2][4]);
+      diagonals.push(this.boardarray[1][3]);
+      diagonals.push(this.boardarray[0][2]);
+      this.findDiagonalWinner(diagonals)
+      diagonals = emptydiagonals;
+      diagonals.push(this.boardarray[3][6]);
+      diagonals.push(this.boardarray[2][5]);
+      diagonals.push(this.boardarray[1][4]);
+      diagonals.push(this.boardarray[0][3]);
+      this.findDiagonalWinner(diagonals);
+      diagonals = emptydiagonals;
+      diagonals.push(this.boardarray[3][0]);
+      diagonals.push(this.boardarray[2][1]);
+      diagonals.push(this.boardarray[1][2]);
+      diagonals.push(this.boardarray[0][3]);
+      this.findDiagonalWinner(diagonals);
       return(winner);
 
 	},  // end of aWinner
