@@ -266,20 +266,21 @@ var board = {
          console.log('for column ' + j + " rlongest " +rlongest+' glongest '+glongest);
         }
       }
+      return(winner);
+      // check diagonals
       let diagonals=[];
       let emptydiagonals=[];
       rlongest = 0
       for (let j=0;j<6;j++) {
         diagonals.push(this.boardarray[j][j])
       }  
-      console.log("checking diagonals");
-      for (k=0;k<diagonals.length;k++) {
-        let tcolor = diagonals[k].color;
-        console.log('tcolor is ' + tcolor)
-      }
-      return(winner)
-      // now check diagonals!!!
+
 	},  // end of aWinner
+  findDiagonalWinner(l) {
+    wow = "";
+    return(wow);
+
+  }
 };
 var players = {
 	currentPlayer: "",
