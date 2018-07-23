@@ -270,6 +270,14 @@ var board = {
         diagonals.push(this.boardarray[j][j])
       }  
       this.findDiagonalWinner(diagonals);
+      diagonals = emptydiagonals;
+      diagonals.push(this.boardarray[0][1]);
+      diagonals.push(this.boardarray[1][2]);
+      diagonals.push(this.boardarray[2][3]);
+      diagonals.push(this.boardarray[3][4]);
+      diagonals.push(this.boardarray[4][5]);
+      diagonals.push(this.boardarray[5][6]);
+      this.findDiagonalWinner(diagonals);
       return(winner);
 
 	},  // end of aWinner
@@ -319,7 +327,7 @@ var board = {
               gdlongest = gnumb;
             }  
             if ((current != 'green') & (prev =='green')) {
-              if (gnumb > glongest){
+              if (gnumb > gdlongest){
                 gdlongest = gnumb;
               }  
               gnumb  = 0;
