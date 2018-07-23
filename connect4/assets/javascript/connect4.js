@@ -51,14 +51,13 @@ var board = {
 			   if ((t.color == 'white') & (done == false)){
 			   	done = true;
 			   	this.boardarray[row][ccol].color=player
-			   	this.boardarray[row][ccol].open=false
+			   	this.boardarray[row][ccol].open=false  
 			   	$("#"+t.name).css('background-color',player)
 			   }	
 		    }
 			row = row -1
 		}
     board.numbPlaced++;
-    console.log("numbPlaced = "+board.numbPlaced);
 		resulto = this.aWinner()
     if ((resulto == "none") & (board.numbPlaced >= 42)) {
       $("#status").html("<strong> Game ends in  tie</strong>")
@@ -262,23 +261,83 @@ var board = {
                 return('green');
               }  
      }
-        if (j == 0) {
-         console.log('for column ' + j + " rlongest " +rlongest+' glongest '+glongest);
-        }
-      }
-      return(winner);
+    }
+      //return(winner);
       // check diagonals
       let diagonals=[];
       let emptydiagonals=[];
-      rlongest = 0
       for (let j=0;j<6;j++) {
         diagonals.push(this.boardarray[j][j])
       }  
+      this.findDiagonalWinner(diagonals);
+      return(winner);
 
 	},  // end of aWinner
   findDiagonalWinner(l) {
-    wow = "";
-    return(wow);
+    rnumb = 0;
+    gnumb = 0;
+    let rdlongest = 0;
+    let gdlongest =0;
+    let dfirsttime = true;
+    let leno = 0;
+    prev = "";
+    current = "";
+    leno = l.length;
+    for (let jj=0;jj<leno;jj++) {
+       if (dfirsttime == true) {
+          current = l.pop().color;
+          prev    = current;
+          dfirsttime = false;
+       } else {
+          prev = current;
+          current = l.pop().color;
+       }
+        if (current=="red") {
+               if (prev == "red") {
+                 rnumb++
+               } else {
+                rnumb = 1;
+               }  
+            }
+            if (rnumb > rdlongest) {
+              rdlongest = rnumb;
+            }
+            if ((current != 'red') & (prev =='red')) {
+              if (rnumb > rdlongest) { 
+                rdlongest = rnumb;
+              }  
+              rnumb  = 0;
+            }
+              if (current=="green") {
+               if (prev == "green") {
+                 gnumb++
+               } else {
+                gnumb = 1;
+               }  
+            }
+            if (gnumb > gdlongest) {
+              gdlongest = gnumb;
+            }  
+            if ((current != 'green') & (prev =='green')) {
+              if (gnumb > glongest){
+                gdlongest = gnumb;
+              }  
+              gnumb  = 0;
+            }
+            if (rdlongest >= 4) {
+               setTimeout((function() {  
+              return board.gameOver('red');
+              }), 1000);
+            } 
+              if (gdlongest >= 4) {  
+                 setTimeout((function() {  
+              return board.gameOver('green');
+              }), 1000);
+              }  
+       
+    }
+   // console.log("diagonl rdlongest = " + rdlongest + " gdlongest = " + gdlongest);
+    return('none');
 
   }
 };
