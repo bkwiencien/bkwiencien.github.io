@@ -75,6 +75,10 @@ var board = {
 	},
    gameOver: function(w) {
      let rr = w.trim();
+     let array =['col00','col01','col02','col03','col04','col05','col06'];
+      for (let i=0;i<array.length;i++) {
+        $("#"+array[i]).unbind('click');
+      }
      if (rr != 'tie') {
    	   $("#status").html("<h2><strong>" + rr + " wins game over</strong><h2>");
      }
