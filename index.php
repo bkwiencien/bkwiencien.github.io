@@ -9,44 +9,37 @@
 </head>
 
 <body>
- <div class="navbar navbar-inverse">
-
-  <div class="navbar-header">
+ <div class="navbar navbar-default navbar-fixed-top" role="navigation">
    <p id="headername" class="navbar-brand"><strong>Bob Kwiencien</strong></p>
- </div>
-
 <div class="container">
   <div class="dropdown">
-      <table id="table1">
-       <tr>
-       <td>
-       <!-- <a id="skills" href="skills.html"> Skills Inventory: </a> -->
-       </td>
-       <td>
+      <ul>
         <li class="dropdown">
         <a href="#" data-toggle="dropdown" id="drop1" class="dropdown-toggle">
-          javascript portfolio:<span class="caret"></span>
+          MENU:<span class="caret"></span>
         </a>
-      <ul class="dropdown-menu" role="menu">
+      <ul class="dropdown-menu multi-level" role="menu">
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript<span class="caret"></span></a>
+         <ul class="dropdown-menu"> 
         <li><a  href="Monty/index.html">Monty Hall Paradox exploration</a></li>
         <li><a  href="CoinFlips/index.html">Unexpected waiting times in coin flips</a></li> 
         <li><a  href="Stock/index.html">Chart Dow Performance</a></li>
         <li><a  href="connect4/index.html">Connect 4 (in development)</a></li>
         <li><a  href="fft/index.html">FFT(in development)</a></li>
         <li><a  href="Giphy/index.html">Fun with gifs</a></li>
-         <li><a  href="Gem-Game/index.html">A Game in Javacript</a></li>
+       <li><a   href="Gem-Game/index.html">A Game in Javacript</a></li>
       </ul>
     </li>
-  </td>
-  <td id='dash0'>---------</td>
-  <td id='dateo'><?php date_default_timezone_set('UTC');
-  echo date("M/d/Y") ?></td>
-</tr>
-</tr>
-</table>
+  </ul>
+</li></ul>
    </div>
-  <!-- <a id="skills" href="#"> Skills Inventory: </a> -->
  </div>
+</li>
+<?php date_default_timezone_set('UTC');
+  echo "<p id='dateo'>";
+  echo date("M/d/Y");
+  echo '</p>'; ?>
 
  </div>
  <br><br>
