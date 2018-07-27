@@ -1,0 +1,3 @@
+
+ufo = pd.read_csv('http://bit.ly/uforeports', parse_dates=['Time'])
+

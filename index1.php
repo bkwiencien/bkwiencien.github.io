@@ -36,9 +36,10 @@
    </div>
  </div>
 </li>
-<td id='dash0'>---------</td>
-  <td id='dateo'><?php date_default_timezone_set('UTC');
-  echo date("M/d/Y") ?></td>
+<?php date_default_timezone_set('UTC');
+  echo "<p id='dateo'>";
+  echo date("M/d/Y");
+  echo '</p>'; ?>
 
  </div>
  <br><br>

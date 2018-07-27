@@ -30,6 +30,14 @@
         <li><a  href="Giphy/index.html">Fun with gifs</a></li>
        <li><a   href="Gem-Game/index.html">A Game in Javacript</a></li>
       </ul>
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PHP <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="divider"></li>
+          <li><a href="#">WIP</a></li>
+          <li class="divider"></li>
+        </ul>
+    </li>
     </li>
   </ul>
 </li></ul>
