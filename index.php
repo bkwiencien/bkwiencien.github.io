@@ -93,7 +93,7 @@ Skilled in data analysis and data visualization techniques allowing for web-base
         <li><strong>Email Me:</strong><a href="mailto:bkwiencien@gmail.com">Email:</a></li>
        <!-- <li><strong>Github:</strong> <a href="#">sampleName</a></li> -->
        <!-- <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li> -->
-         <li><strong>Download My Resume:</strong><a href="assets/RES/Kwiencien_Bob_dev.doc">Resume:</a></li>
+         <li><strong>Download My Resume:</strong><a href="assets/RES/Kwiencien_Bob_dev_exp1.docx">Resume:</a></li>
          <a href="https://linkedin.com/in/bobkwiencien">
         <li><img src="assets/images/linkedin-128.png" height="30" width="30"> </li> </a>
       </ul>
