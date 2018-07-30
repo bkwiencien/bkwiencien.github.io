@@ -34,7 +34,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Django <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li class="divider"></li>
-          <li><a href="#">WIP</a></li>
+          <li><a href="http://localhost:8000">UFO sightings</a></li>
           <li class="divider"></li>
         </ul>
     </li>
