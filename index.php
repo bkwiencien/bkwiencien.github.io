@@ -73,7 +73,7 @@ Skilled in data analysis and data visualization techniques allowing for web-base
               <tr><td> <strong>Programming Languages:</strong> C, Java, PL/SQL, shell scripting, perl,  JavaScript, Python, R</td></tr>
               <tr><td> <strong>Methodologies/Processes:</strong> Agile, SDLC, SOA, Continuous Integration, Data Governance, MDM, Data Movement Architecture - ETL, BI, PCI Compliance</td> </tr>
               <tr><td> <strong>Business Continuance:</strong> Oracle Streams, PostgreSQL Replication, Standby Database, Oracle RAC</td></tr>
-              <tr><td> <strong>Web technologies:</strong> JavaScript, Ajax, JQuery, Node.js, HTML5, CSS, Bootstrap, express.js</td></tr>
+              <tr><td> <strong>Web technologies:</strong> JavaScript, Ajax, JQuery, Django, Node.js, HTML5, CSS, Bootstrap, express.js</td></tr>
               <tr><td> <strong>Source Control/utilities:</strong> git/github, subversion, Jenkins</td> </tr>
               <tr><td> <strong>Development Tools:</strong> eclipse, jdeveloper, sqldeveloper, TOAD </td></tr>
               <tr><td><strong>Package management:</strong> npm, conda </td></tr>
