@@ -96,6 +96,8 @@ Skilled in data analysis and data visualization techniques allowing for web-base
          <li><strong>Download My Resume:</strong><a href="assets/RES/Kwiencien_Bob_dev_exp1.docx">Resume:</a></li>
          <a href="https://linkedin.com/in/bobkwiencien">
         <li><img src="assets/images/linkedin-128.png" height="30" width="30"> </li> </a>
+        <a href="http://localhost:8000/comments">
+        <li><strong>Leave a Commemnt!</strong></li></a>  
       </ul>
   </div>
   <footer>&#64; Copyright 2018 Bob Kwiencien</footer>
